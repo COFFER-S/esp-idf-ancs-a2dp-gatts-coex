@@ -1,0 +1,14 @@
+idf_component_register(
+    SRCS 
+        "main.c"
+        "coex_manager.c"
+        "bt_init.c"
+    INCLUDE_DIRS 
+        "."
+    REQUIRES 
+        nvs_flash
+        bt
+        ancs
+        a2dp_sink
+        gatts_server
+)

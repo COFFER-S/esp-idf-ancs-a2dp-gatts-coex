@@ -1,0 +1,8 @@
+CMake Error at /root/esp/esp-idf/tools/cmake/component.cmake:313 (message):
+  Include directory '/root/esp/esp-idf/components/lwip/lwip/src/include' is
+  not a directory.
+Call Stack (most recent call first):
+  /root/esp/esp-idf/tools/cmake/component.cmake:481 (__component_add_include_dirs)
+  /root/esp/esp-idf/components/lwip/CMakeLists.txt:172 (idf_component_register)
+
+

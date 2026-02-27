@@ -1,0 +1,12 @@
+idf_component_register(
+    SRCS 
+        "ble_ancs.c"
+        "ble_ancs_attr.c"
+    INCLUDE_DIRS 
+        "."
+        "include"
+    REQUIRES 
+        bt
+        nvs_flash
+        freertos
+)

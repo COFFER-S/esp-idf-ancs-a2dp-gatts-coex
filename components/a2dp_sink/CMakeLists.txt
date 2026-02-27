@@ -1,0 +1,13 @@
+idf_component_register(
+    SRCS 
+        "bt_app_av.c"
+        "bt_app_core.c"
+        "a2dp_sink.c"
+    INCLUDE_DIRS 
+        "."
+        "include"
+    REQUIRES 
+        bt
+        nvs_flash
+        freertos
+)
