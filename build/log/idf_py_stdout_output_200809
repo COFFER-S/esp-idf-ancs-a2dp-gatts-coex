@@ -1,0 +1,625 @@
+[1/119] Linking C static library esp-idf/console/libconsole.a
+[2/119] Building C object esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/proto-c/sec0.pb-c.c.obj
+[3/119] Building C object esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/crypto/srp6a/esp_srp_mpi.c.obj
+[4/119] Building C object esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/proto-c/session.pb-c.c.obj
+[5/119] Performing build step for 'bootloader'
+[1/1] cd /root/openclaw/workspace/esp-idf-ancs-a2dp-gatts-coex/build/bootloader/esp-idf/esptool_py && /root/.espressif/python_env/idf5.2_py3.11_env/bin/python /root/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /root/openclaw/workspace/esp-idf-ancs-a2dp-gatts-coex/build/bootloader/bootloader.bin
+Bootloader binary size 0x6860 bytes. 0x7a0 bytes (7%) free.
+[6/119] Building C object esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/proto-c/sec2.pb-c.c.obj
+[7/119] Building C object esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/transports/protocomm_console.c.obj
+[8/119] No install step for 'bootloader'
+[9/119] Building C object esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/security/security0.c.obj
+[10/119] Building C object esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/crypto/srp6a/esp_srp.c.obj
+[11/119] Completed 'bootloader'
+[12/119] Building C object esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/common/protocomm.c.obj
+[13/119] Building C object esp-idf/esp_local_ctrl/CMakeFiles/__idf_esp_local_ctrl.dir/src/esp_local_ctrl_handler.c.obj
+[14/119] Building C object esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/transports/protocomm_httpd.c.obj
+[15/119] Building C object esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/simple_ble/simple_ble.c.obj
+[16/119] Building C object esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/security/security1.c.obj
+[17/119] Building C object esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/transports/protocomm_ble.c.obj
+[18/119] Building C object esp-idf/esp_hid/CMakeFiles/__idf_esp_hid.dir/src/ble_hidd.c.obj
+[19/119] Building C object esp-idf/esp_local_ctrl/CMakeFiles/__idf_esp_local_ctrl.dir/src/esp_local_ctrl_transport_ble.c.obj
+[20/119] Building C object esp-idf/espcoredump/CMakeFiles/__idf_espcoredump.dir/src/core_dump_checksum.c.obj
+[21/119] Building C object esp-idf/espcoredump/CMakeFiles/__idf_espcoredump.dir/src/core_dump_common.c.obj
+[22/119] Building C object esp-idf/esp_local_ctrl/CMakeFiles/__idf_esp_local_ctrl.dir/src/esp_local_ctrl_transport_httpd.c.obj
+[23/119] Building C object esp-idf/esp_local_ctrl/CMakeFiles/__idf_esp_local_ctrl.dir/proto-c/esp_local_ctrl.pb-c.c.obj
+[24/119] Building C object esp-idf/espcoredump/CMakeFiles/__idf_espcoredump.dir/src/core_dump_uart.c.obj
+[25/119] Building C object esp-idf/esp_hid/CMakeFiles/__idf_esp_hid.dir/src/ble_hidh.c.obj
+[26/119] Building C object esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_io_i2s.c.obj
+[27/119] Building C object esp-idf/espcoredump/CMakeFiles/__idf_espcoredump.dir/src/core_dump_elf.c.obj
+[28/119] Building C object esp-idf/espcoredump/CMakeFiles/__idf_espcoredump.dir/src/core_dump_binary.c.obj
+[29/119] Building CXX object esp-idf/wear_levelling/CMakeFiles/__idf_wear_levelling.dir/crc32.cpp.obj
+[30/119] Building C object esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/security/security2.c.obj
+[31/119] Building C object esp-idf/esp_local_ctrl/CMakeFiles/__idf_esp_local_ctrl.dir/src/esp_local_ctrl.c.obj
+[32/119] Building CXX object esp-idf/wear_levelling/CMakeFiles/__idf_wear_levelling.dir/Partition.cpp.obj
+[33/119] Building CXX object esp-idf/wear_levelling/CMakeFiles/__idf_wear_levelling.dir/SPI_Flash.cpp.obj
+[34/119] Linking C static library esp-idf/bt/libbt.a
+[35/119] Building C object esp-idf/espcoredump/CMakeFiles/__idf_espcoredump.dir/src/port/xtensa/core_dump_port.c.obj
+[36/119] Linking C static library esp-idf/esp_lcd/libesp_lcd.a
+[37/119] Linking C static library esp-idf/esp_hid/libesp_hid.a
+[38/119] Building C object esp-idf/espcoredump/CMakeFiles/__idf_espcoredump.dir/src/core_dump_flash.c.obj
+[39/119] Building CXX object esp-idf/wear_levelling/CMakeFiles/__idf_wear_levelling.dir/wear_levelling.cpp.obj
+[40/119] Building CXX object esp-idf/wear_levelling/CMakeFiles/__idf_wear_levelling.dir/WL_Ext_Perf.cpp.obj
+[41/119] Building C object esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir/diskio/diskio_wl.c.obj
+[42/119] Building CXX object esp-idf/wear_levelling/CMakeFiles/__idf_wear_levelling.dir/WL_Ext_Safe.cpp.obj
+[43/119] Building C object esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir/diskio/diskio_rawflash.c.obj
+[44/119] Linking C static library esp-idf/espcoredump/libespcoredump.a
+[45/119] Building C object esp-idf/sdmmc/CMakeFiles/__idf_sdmmc.dir/sdmmc_common.c.obj
+[46/119] Building C object esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir/src/ffunicode.c.obj
+[47/119] Building C object esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir/diskio/diskio.c.obj
+[48/119] Building C object esp-idf/sdmmc/CMakeFiles/__idf_sdmmc.dir/sdmmc_init.c.obj
+[49/119] Building C object esp-idf/sdmmc/CMakeFiles/__idf_sdmmc.dir/sdmmc_mmc.c.obj
+[50/119] Building C object esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir/port/freertos/ffsystem.c.obj
+[51/119] Building C object esp-idf/sdmmc/CMakeFiles/__idf_sdmmc.dir/sdmmc_io.c.obj
+[52/119] Building C object esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir/diskio/diskio_sdmmc.c.obj
+[53/119] Building C object esp-idf/sdmmc/CMakeFiles/__idf_sdmmc.dir/sdmmc_sd.c.obj
+[54/119] Building C object esp-idf/mqtt/CMakeFiles/__idf_mqtt.dir/esp-mqtt/lib/platform_esp32_idf.c.obj
+[55/119] Building C object esp-idf/nvs_sec_provider/CMakeFiles/__idf_nvs_sec_provider.dir/nvs_sec_provider.c.obj
+[56/119] Building C object esp-idf/perfmon/CMakeFiles/__idf_perfmon.dir/xtensa_perfmon_masks.c.obj
+[57/119] Building C object esp-idf/perfmon/CMakeFiles/__idf_perfmon.dir/xtensa_perfmon_access.c.obj
+[58/119] Building C object esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir/vfs/vfs_fat_spiflash.c.obj
+[59/119] Linking C static library esp-idf/nvs_sec_provider/libnvs_sec_provider.a
+[60/119] Building C object esp-idf/perfmon/CMakeFiles/__idf_perfmon.dir/xtensa_perfmon_apis.c.obj
+[61/119] Building CXX object esp-idf/wear_levelling/CMakeFiles/__idf_wear_levelling.dir/WL_Flash.cpp.obj
+[62/119] Building C object esp-idf/mqtt/CMakeFiles/__idf_mqtt.dir/esp-mqtt/lib/mqtt_outbox.c.obj
+[63/119] Building C object esp-idf/sdmmc/CMakeFiles/__idf_sdmmc.dir/sdmmc_cmd.c.obj
+[64/119] Linking C static library esp-idf/perfmon/libperfmon.a
+[65/119] Linking C static library esp-idf/wear_levelling/libwear_levelling.a
+[66/119] Linking C static library esp-idf/sdmmc/libsdmmc.a
+[67/119] Building C object esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir/vfs/vfs_fat_sdmmc.c.obj
+[68/119] Building C object esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir/vfs/vfs_fat.c.obj
+[69/119] Building C object esp-idf/json/CMakeFiles/__idf_json.dir/cJSON/cJSON_Utils.c.obj
+[70/119] Building C object esp-idf/mqtt/CMakeFiles/__idf_mqtt.dir/esp-mqtt/lib/mqtt_msg.c.obj
+[71/119] Building C object esp-idf/spiffs/CMakeFiles/__idf_spiffs.dir/spiffs_api.c.obj
+[72/119] Building C object esp-idf/spiffs/CMakeFiles/__idf_spiffs.dir/spiffs/src/spiffs_cache.c.obj
+[73/119] Building C object esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/src/wifi_ctrl.c.obj
+[74/119] Building C object esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/src/handlers.c.obj
+[75/119] Building C object esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/src/wifi_config.c.obj
+[76/119] Building C object esp-idf/protobuf-c/CMakeFiles/__idf_protobuf-c.dir/protobuf-c/protobuf-c/protobuf-c.c.obj
+[77/119] Building C object esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/src/wifi_scan.c.obj
+[78/119] Linking C static library esp-idf/protobuf-c/libprotobuf-c.a
+[79/119] Building C object esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/src/scheme_console.c.obj
+[80/119] Building C object esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/proto-c/wifi_constants.pb-c.c.obj
+[81/119] Building C object esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/proto-c/wifi_ctrl.pb-c.c.obj
+[82/119] Building C object esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/src/scheme_softap.c.obj
+[83/119] Building C object esp-idf/a2dp_sink/CMakeFiles/__idf_a2dp_sink.dir/bt_app_av.c.obj
+/root/openclaw/workspace/esp-idf-ancs-a2dp-gatts-coex/components/a2dp_sink/bt_app_av.c:11:20: warning: 'TAG' defined but not used [-Wunused-variable]
+   11 | static const char *TAG = "BT_APP_AV";
+      |                    ^~~
+[84/119] Building C object esp-idf/spiffs/CMakeFiles/__idf_spiffs.dir/spiffs/src/spiffs_hydrogen.c.obj
+[85/119] Linking C static library esp-idf/protocomm/libprotocomm.a
+[86/119] Building C object esp-idf/spiffs/CMakeFiles/__idf_spiffs.dir/spiffs/src/spiffs_gc.c.obj
+[87/119] Building C object esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/proto-c/wifi_scan.pb-c.c.obj
+[88/119] Building C object esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/proto-c/wifi_config.pb-c.c.obj
+[89/119] Building C object esp-idf/gatts_server/CMakeFiles/__idf_gatts_server.dir/gatts_server.c.obj
+[90/119] Building C object esp-idf/spiffs/CMakeFiles/__idf_spiffs.dir/spiffs/src/spiffs_check.c.obj
+[91/119] Building C object esp-idf/a2dp_sink/CMakeFiles/__idf_a2dp_sink.dir/bt_app_core.c.obj
+[92/119] Linking C static library esp-idf/esp_local_ctrl/libesp_local_ctrl.a
+[93/119] Linking C static library esp-idf/gatts_server/libgatts_server.a
+[94/119] Building C object esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir/src/ff.c.obj
+[95/119] Building C object esp-idf/ancs/CMakeFiles/__idf_ancs.dir/ble_ancs_attr.c.obj
+[96/119] Building C object esp-idf/a2dp_sink/CMakeFiles/__idf_a2dp_sink.dir/a2dp_sink.c.obj
+FAILED: esp-idf/a2dp_sink/CMakeFiles/__idf_a2dp_sink.dir/a2dp_sink.c.obj 
+/root/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc -DESP_PLATFORM -DIDF_VER=\"v5.2.1\" -DSOC_MMU_PAGE_SIZE=CONFIG_MMU_PAGE_SIZE -DSOC_XTAL_FREQ_MHZ=CONFIG_XTAL_FREQ -D_GLIBCXX_HAVE_POSIX_SEMAPHORE -D_GLIBCXX_USE_POSIX_SEMAPHORE -D_GNU_SOURCE -D_POSIX_READER_WRITER_LOCKS -I/root/openclaw/workspace/esp-idf-ancs-a2dp-gatts-coex/build/config -I/root/openclaw/workspace/esp-idf-ancs-a2dp-gatts-coex/components/a2dp_sink -I/root/openclaw/workspace/esp-idf-ancs-a2dp-gatts-coex/components/a2dp_sink/include -I/root/esp/esp-idf/components/newlib/platform_include -I/root/esp/esp-idf/components/freertos/config/include -I/root/esp/esp-idf/components/freertos/config/include/freertos -I/root/esp/esp-idf/components/freertos/config/xtensa/include -I/root/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include -I/root/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include -I/root/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos -I/root/esp/esp-idf/components/freertos/esp_additions/include -I/root/esp/esp-idf/components/esp_hw_support/include -I/root/esp/esp-idf/components/esp_hw_support/include/soc -I/root/esp/esp-idf/components/esp_hw_support/include/soc/esp32 -I/root/esp/esp-idf/components/esp_hw_support/port/esp32/. -I/root/esp/esp-idf/components/heap/include -I/root/esp/esp-idf/components/log/include -I/root/esp/esp-idf/components/soc/include -I/root/esp/esp-idf/components/soc/esp32 -I/root/esp/esp-idf/components/soc/esp32/include -I/root/esp/esp-idf/components/hal/platform_port/include -I/root/esp/esp-idf/components/hal/esp32/include -I/root/esp/esp-idf/components/hal/include -I/root/esp/esp-idf/components/esp_rom/include -I/root/esp/esp-idf/components/esp_rom/include/esp32 -I/root/esp/esp-idf/components/esp_rom/esp32 -I/root/esp/esp-idf/components/esp_common/include -I/root/esp/esp-idf/components/esp_system/include -I/root/esp/esp-idf/components/esp_system/port/soc -I/root/esp/esp-idf/components/esp_system/port/include/private -I/root/esp/esp-idf/components/xtensa/esp32/include -I/root/esp/esp-idf/components/xtensa/include -I/root/esp/esp-idf/components/xtensa/deprecated_include -I/root/esp/esp-idf/components/lwip/include -I/root/esp/esp-idf/components/lwip/include/apps -I/root/esp/esp-idf/components/lwip/include/apps/sntp -I/root/esp/esp-idf/components/lwip/lwip/src/include -I/root/esp/esp-idf/components/lwip/port/include -I/root/esp/esp-idf/components/lwip/port/freertos/include -I/root/esp/esp-idf/components/lwip/port/esp32xx/include -I/root/esp/esp-idf/components/lwip/port/esp32xx/include/arch -I/root/esp/esp-idf/components/lwip/port/esp32xx/include/sys -I/root/esp/esp-idf/components/bt/include/esp32/include -I/root/esp/esp-idf/components/bt/common/osi/include -I/root/esp/esp-idf/components/bt/common/api/include/api -I/root/esp/esp-idf/components/bt/common/btc/profile/esp/blufi/include -I/root/esp/esp-idf/components/bt/common/btc/profile/esp/include -I/root/esp/esp-idf/components/bt/host/bluedroid/api/include/api -I/root/esp/esp-idf/components/bt/porting/ext/tinycrypt/include -I/root/esp/esp-idf/components/esp_timer/include -I/root/esp/esp-idf/components/esp_wifi/include -I/root/esp/esp-idf/components/esp_wifi/wifi_apps/include -I/root/esp/esp-idf/components/esp_event/include -I/root/esp/esp-idf/components/esp_phy/include -I/root/esp/esp-idf/components/esp_phy/esp32/include -I/root/esp/esp-idf/components/esp_netif/include -I/root/esp/esp-idf/components/nvs_flash/include -I/root/esp/esp-idf/components/spi_flash/include -I/root/esp/esp-idf/components/esp_partition/include -I/root/esp/esp-idf/components/esp_ringbuf/include -mlongcalls -Wno-frame-address  -fdiagnostics-color=always -ffunction-sections -fdata-sections -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-variable -Wno-error=unused-but-set-variable -Wno-error=deprecated-declarations -Wextra -Wno-unused-parameter -Wno-sign-compare -Wno-enum-conversion -gdwarf-4 -ggdb -Og -fno-shrink-wrap -fmacro-prefix-map=/root/openclaw/workspace/esp-idf-ancs-a2dp-gatts-coex=. -fmacro-prefix-map=/root/esp/esp-idf=/IDF -fstrict-volatile-bitfields -fno-jump-tables -fno-tree-switch-conversion -std=gnu17 -Wno-old-style-declaration -MD -MT esp-idf/a2dp_sink/CMakeFiles/__idf_a2dp_sink.dir/a2dp_sink.c.obj -MF esp-idf/a2dp_sink/CMakeFiles/__idf_a2dp_sink.dir/a2dp_sink.c.obj.d -o esp-idf/a2dp_sink/CMakeFiles/__idf_a2dp_sink.dir/a2dp_sink.c.obj -c /root/openclaw/workspace/esp-idf-ancs-a2dp-gatts-coex/components/a2dp_sink/a2dp_sink.c
+In file included from /root/openclaw/workspace/esp-idf-ancs-a2dp-gatts-coex/components/a2dp_sink/a2dp_sink.c:11:
+/root/openclaw/workspace/esp-idf-ancs-a2dp-gatts-coex/components/a2dp_sink/a2dp_sink.c: In function 'bt_app_a2d_cb':
+/root/openclaw/workspace/esp-idf-ancs-a2dp-gatts-coex/components/a2dp_sink/a2dp_sink.c:299:29: error: 'esp_a2d_cb_param_t' has no member named 'media_ctrl_ack'; did you mean 'media_ctrl_stat'?
+  299 |                      param->media_ctrl_ack.cmd, param->media_ctrl_ack.status);
+      |                             ^~~~~~~~~~~~~~
+/root/esp/esp-idf/components/log/include/esp_log.h:436:137: note: in definition of macro 'ESP_LOG_LEVEL'
+  436 |         if (level==ESP_LOG_ERROR )          { esp_log_write(ESP_LOG_ERROR,      tag, LOG_FORMAT(E, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                                                                         ^~~~~~~~~~~
+/root/esp/esp-idf/components/log/include/esp_log.h:368:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  368 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+/root/openclaw/workspace/esp-idf-ancs-a2dp-gatts-coex/components/a2dp_sink/a2dp_sink.c:298:13: note: in expansion of macro 'ESP_LOGI'
+  298 |             ESP_LOGI(TAG, "A2DP media control ack: cmd=%d, status=%d",
+      |             ^~~~~~~~
+/root/openclaw/workspace/esp-idf-ancs-a2dp-gatts-coex/components/a2dp_sink/a2dp_sink.c:299:56: error: 'esp_a2d_cb_param_t' has no member named 'media_ctrl_ack'; did you mean 'media_ctrl_stat'?
+  299 |                      param->media_ctrl_ack.cmd, param->media_ctrl_ack.status);
+      |                                                        ^~~~~~~~~~~~~~
+/root/esp/esp-idf/components/log/include/esp_log.h:436:137: note: in definition of macro 'ESP_LOG_LEVEL'
+  436 |         if (level==ESP_LOG_ERROR )          { esp_log_write(ESP_LOG_ERROR,      tag, LOG_FORMAT(E, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                                                                         ^~~~~~~~~~~
+/root/esp/esp-idf/components/log/include/esp_log.h:368:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  368 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+/root/openclaw/workspace/esp-idf-ancs-a2dp-gatts-coex/components/a2dp_sink/a2dp_sink.c:298:13: note: in expansion of macro 'ESP_LOGI'
+  298 |             ESP_LOGI(TAG, "A2DP media control ack: cmd=%d, status=%d",
+      |             ^~~~~~~~
+/root/openclaw/workspace/esp-idf-ancs-a2dp-gatts-coex/components/a2dp_sink/a2dp_sink.c:299:29: error: 'esp_a2d_cb_param_t' has no member named 'media_ctrl_ack'; did you mean 'media_ctrl_stat'?
+  299 |                      param->media_ctrl_ack.cmd, param->media_ctrl_ack.status);
+      |                             ^~~~~~~~~~~~~~
+/root/esp/esp-idf/components/log/include/esp_log.h:437:137: note: in definition of macro 'ESP_LOG_LEVEL'
+  437 |         else if (level==ESP_LOG_WARN )      { esp_log_write(ESP_LOG_WARN,       tag, LOG_FORMAT(W, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                                                                         ^~~~~~~~~~~
+/root/esp/esp-idf/components/log/include/esp_log.h:368:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  368 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+/root/openclaw/workspace/esp-idf-ancs-a2dp-gatts-coex/components/a2dp_sink/a2dp_sink.c:298:13: note: in expansion of macro 'ESP_LOGI'
+  298 |             ESP_LOGI(TAG, "A2DP media control ack: cmd=%d, status=%d",
+      |             ^~~~~~~~
+/root/openclaw/workspace/esp-idf-ancs-a2dp-gatts-coex/components/a2dp_sink/a2dp_sink.c:299:56: error: 'esp_a2d_cb_param_t' has no member named 'media_ctrl_ack'; did you mean 'media_ctrl_stat'?
+  299 |                      param->media_ctrl_ack.cmd, param->media_ctrl_ack.status);
+      |                                                        ^~~~~~~~~~~~~~
+/root/esp/esp-idf/components/log/include/esp_log.h:437:137: note: in definition of macro 'ESP_LOG_LEVEL'
+  437 |         else if (level==ESP_LOG_WARN )      { esp_log_write(ESP_LOG_WARN,       tag, LOG_FORMAT(W, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                                                                         ^~~~~~~~~~~
+/root/esp/esp-idf/components/log/include/esp_log.h:368:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  368 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+/root/openclaw/workspace/esp-idf-ancs-a2dp-gatts-coex/components/a2dp_sink/a2dp_sink.c:298:13: note: in expansion of macro 'ESP_LOGI'
+  298 |             ESP_LOGI(TAG, "A2DP media control ack: cmd=%d, status=%d",
+      |             ^~~~~~~~
+/root/openclaw/workspace/esp-idf-ancs-a2dp-gatts-coex/components/a2dp_sink/a2dp_sink.c:299:29: error: 'esp_a2d_cb_param_t' has no member named 'media_ctrl_ack'; did you mean 'media_ctrl_stat'?
+  299 |                      param->media_ctrl_ack.cmd, param->media_ctrl_ack.status);
+      |                             ^~~~~~~~~~~~~~
+/root/esp/esp-idf/components/log/include/esp_log.h:438:137: note: in definition of macro 'ESP_LOG_LEVEL'
+  438 |         else if (level==ESP_LOG_DEBUG )     { esp_log_write(ESP_LOG_DEBUG,      tag, LOG_FORMAT(D, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                                                                         ^~~~~~~~~~~
+/root/esp/esp-idf/components/log/include/esp_log.h:368:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  368 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+/root/openclaw/workspace/esp-idf-ancs-a2dp-gatts-coex/components/a2dp_sink/a2dp_sink.c:298:13: note: in expansion of macro 'ESP_LOGI'
+  298 |             ESP_LOGI(TAG, "A2DP media control ack: cmd=%d, status=%d",
+      |             ^~~~~~~~
+/root/openclaw/workspace/esp-idf-ancs-a2dp-gatts-coex/components/a2dp_sink/a2dp_sink.c:299:56: error: 'esp_a2d_cb_param_t' has no member named 'media_ctrl_ack'; did you mean 'media_ctrl_stat'?
+  299 |                      param->media_ctrl_ack.cmd, param->media_ctrl_ack.status);
+      |                                                        ^~~~~~~~~~~~~~
+/root/esp/esp-idf/components/log/include/esp_log.h:438:137: note: in definition of macro 'ESP_LOG_LEVEL'
+  438 |         else if (level==ESP_LOG_DEBUG )     { esp_log_write(ESP_LOG_DEBUG,      tag, LOG_FORMAT(D, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                                                                         ^~~~~~~~~~~
+/root/esp/esp-idf/components/log/include/esp_log.h:368:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  368 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+/root/openclaw/workspace/esp-idf-ancs-a2dp-gatts-coex/components/a2dp_sink/a2dp_sink.c:298:13: note: in expansion of macro 'ESP_LOGI'
+  298 |             ESP_LOGI(TAG, "A2DP media control ack: cmd=%d, status=%d",
+      |             ^~~~~~~~
+/root/openclaw/workspace/esp-idf-ancs-a2dp-gatts-coex/components/a2dp_sink/a2dp_sink.c:299:29: error: 'esp_a2d_cb_param_t' has no member named 'media_ctrl_ack'; did you mean 'media_ctrl_stat'?
+  299 |                      param->media_ctrl_ack.cmd, param->media_ctrl_ack.status);
+      |                             ^~~~~~~~~~~~~~
+/root/esp/esp-idf/components/log/include/esp_log.h:439:137: note: in definition of macro 'ESP_LOG_LEVEL'
+  439 |         else if (level==ESP_LOG_VERBOSE )   { esp_log_write(ESP_LOG_VERBOSE,    tag, LOG_FORMAT(V, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                                                                         ^~~~~~~~~~~
+/root/esp/esp-idf/components/log/include/esp_log.h:368:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  368 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+/root/openclaw/workspace/esp-idf-ancs-a2dp-gatts-coex/components/a2dp_sink/a2dp_sink.c:298:13: note: in expansion of macro 'ESP_LOGI'
+  298 |             ESP_LOGI(TAG, "A2DP media control ack: cmd=%d, status=%d",
+      |             ^~~~~~~~
+/root/openclaw/workspace/esp-idf-ancs-a2dp-gatts-coex/components/a2dp_sink/a2dp_sink.c:299:56: error: 'esp_a2d_cb_param_t' has no member named 'media_ctrl_ack'; did you mean 'media_ctrl_stat'?
+  299 |                      param->media_ctrl_ack.cmd, param->media_ctrl_ack.status);
+      |                                                        ^~~~~~~~~~~~~~
+/root/esp/esp-idf/components/log/include/esp_log.h:439:137: note: in definition of macro 'ESP_LOG_LEVEL'
+  439 |         else if (level==ESP_LOG_VERBOSE )   { esp_log_write(ESP_LOG_VERBOSE,    tag, LOG_FORMAT(V, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                                                                         ^~~~~~~~~~~
+/root/esp/esp-idf/components/log/include/esp_log.h:368:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  368 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+/root/openclaw/workspace/esp-idf-ancs-a2dp-gatts-coex/components/a2dp_sink/a2dp_sink.c:298:13: note: in expansion of macro 'ESP_LOGI'
+  298 |             ESP_LOGI(TAG, "A2DP media control ack: cmd=%d, status=%d",
+      |             ^~~~~~~~
+/root/openclaw/workspace/esp-idf-ancs-a2dp-gatts-coex/components/a2dp_sink/a2dp_sink.c:299:29: error: 'esp_a2d_cb_param_t' has no member named 'media_ctrl_ack'; did you mean 'media_ctrl_stat'?
+  299 |                      param->media_ctrl_ack.cmd, param->media_ctrl_ack.status);
+      |                             ^~~~~~~~~~~~~~
+/root/esp/esp-idf/components/log/include/esp_log.h:440:137: note: in definition of macro 'ESP_LOG_LEVEL'
+  440 |         else                                { esp_log_write(ESP_LOG_INFO,       tag, LOG_FORMAT(I, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                                                                         ^~~~~~~~~~~
+/root/esp/esp-idf/components/log/include/esp_log.h:368:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  368 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+/root/openclaw/workspace/esp-idf-ancs-a2dp-gatts-coex/components/a2dp_sink/a2dp_sink.c:298:13: note: in expansion of macro 'ESP_LOGI'
+  298 |             ESP_LOGI(TAG, "A2DP media control ack: cmd=%d, status=%d",
+      |             ^~~~~~~~
+/root/openclaw/workspace/esp-idf-ancs-a2dp-gatts-coex/components/a2dp_sink/a2dp_sink.c:299:56: error: 'esp_a2d_cb_param_t' has no member named 'media_ctrl_ack'; did you mean 'media_ctrl_stat'?
+  299 |                      param->media_ctrl_ack.cmd, param->media_ctrl_ack.status);
+      |                                                        ^~~~~~~~~~~~~~
+/root/esp/esp-idf/components/log/include/esp_log.h:440:137: note: in definition of macro 'ESP_LOG_LEVEL'
+  440 |         else                                { esp_log_write(ESP_LOG_INFO,       tag, LOG_FORMAT(I, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                                                                         ^~~~~~~~~~~
+/root/esp/esp-idf/components/log/include/esp_log.h:368:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  368 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+/root/openclaw/workspace/esp-idf-ancs-a2dp-gatts-coex/components/a2dp_sink/a2dp_sink.c:298:13: note: in expansion of macro 'ESP_LOGI'
+  298 |             ESP_LOGI(TAG, "A2DP media control ack: cmd=%d, status=%d",
+      |             ^~~~~~~~
+/root/openclaw/workspace/esp-idf-ancs-a2dp-gatts-coex/components/a2dp_sink/a2dp_sink.c: In function 'bt_app_a2d_data_cb':
+/root/esp/esp-idf/components/log/include/esp_log.h:291:27: error: format '%u' expects argument of type 'unsigned int', but argument 6 has type 'uint32_t' {aka 'long unsigned int'} [-Werror=format=]
+  291 | #define LOG_COLOR(COLOR)  "\033[0;" COLOR "m"
+      |                           ^~~~~~~~~
+/root/esp/esp-idf/components/log/include/esp_log.h:294:27: note: in expansion of macro 'LOG_COLOR'
+  294 | #define LOG_COLOR_E       LOG_COLOR(LOG_COLOR_RED)
+      |                           ^~~~~~~~~
+/root/esp/esp-idf/components/log/include/esp_log.h:308:37: note: in expansion of macro 'LOG_COLOR_E'
+  308 | #define LOG_FORMAT(letter, format)  LOG_COLOR_ ## letter #letter " (%" PRIu32 ") %s: " format LOG_RESET_COLOR "\n"
+      |                                     ^~~~~~~~~~
+/root/esp/esp-idf/components/log/include/esp_log.h:436:86: note: in expansion of macro 'LOG_FORMAT'
+  436 |         if (level==ESP_LOG_ERROR )          { esp_log_write(ESP_LOG_ERROR,      tag, LOG_FORMAT(E, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                      ^~~~~~~~~~
+/root/esp/esp-idf/components/log/include/esp_log.h:464:41: note: in expansion of macro 'ESP_LOG_LEVEL'
+  464 |         if ( LOG_LOCAL_LEVEL >= level ) ESP_LOG_LEVEL(level, tag, format, ##__VA_ARGS__); \
+      |                                         ^~~~~~~~~~~~~
+/root/esp/esp-idf/components/log/include/esp_log.h:368:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  368 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+/root/openclaw/workspace/esp-idf-ancs-a2dp-gatts-coex/components/a2dp_sink/a2dp_sink.c:321:9: note: in expansion of macro 'ESP_LOGI'
+  321 |         ESP_LOGI(TAG, "A2DP: %u packets, %llu bytes, %u pps",
+      |         ^~~~~~~~
+/root/esp/esp-idf/components/log/include/esp_log.h:291:27: error: format '%u' expects argument of type 'unsigned int', but argument 8 has type 'long unsigned int' [-Werror=format=]
+  291 | #define LOG_COLOR(COLOR)  "\033[0;" COLOR "m"
+      |                           ^~~~~~~~~
+/root/esp/esp-idf/components/log/include/esp_log.h:294:27: note: in expansion of macro 'LOG_COLOR'
+  294 | #define LOG_COLOR_E       LOG_COLOR(LOG_COLOR_RED)
+      |                           ^~~~~~~~~
+/root/esp/esp-idf/components/log/include/esp_log.h:308:37: note: in expansion of macro 'LOG_COLOR_E'
+  308 | #define LOG_FORMAT(letter, format)  LOG_COLOR_ ## letter #letter " (%" PRIu32 ") %s: " format LOG_RESET_COLOR "\n"
+      |                                     ^~~~~~~~~~
+/root/esp/esp-idf/components/log/include/esp_log.h:436:86: note: in expansion of macro 'LOG_FORMAT'
+  436 |         if (level==ESP_LOG_ERROR )          { esp_log_write(ESP_LOG_ERROR,      tag, LOG_FORMAT(E, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                      ^~~~~~~~~~
+/root/esp/esp-idf/components/log/include/esp_log.h:464:41: note: in expansion of macro 'ESP_LOG_LEVEL'
+  464 |         if ( LOG_LOCAL_LEVEL >= level ) ESP_LOG_LEVEL(level, tag, format, ##__VA_ARGS__); \
+      |                                         ^~~~~~~~~~~~~
+/root/esp/esp-idf/components/log/include/esp_log.h:368:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  368 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+/root/openclaw/workspace/esp-idf-ancs-a2dp-gatts-coex/components/a2dp_sink/a2dp_sink.c:321:9: note: in expansion of macro 'ESP_LOGI'
+  321 |         ESP_LOGI(TAG, "A2DP: %u packets, %llu bytes, %u pps",
+      |         ^~~~~~~~
+/root/esp/esp-idf/components/log/include/esp_log.h:291:27: error: format '%u' expects argument of type 'unsigned int', but argument 6 has type 'uint32_t' {aka 'long unsigned int'} [-Werror=format=]
+  291 | #define LOG_COLOR(COLOR)  "\033[0;" COLOR "m"
+      |                           ^~~~~~~~~
+/root/esp/esp-idf/components/log/include/esp_log.h:295:27: note: in expansion of macro 'LOG_COLOR'
+  295 | #define LOG_COLOR_W       LOG_COLOR(LOG_COLOR_BROWN)
+      |                           ^~~~~~~~~
+/root/esp/esp-idf/components/log/include/esp_log.h:308:37: note: in expansion of macro 'LOG_COLOR_W'
+  308 | #define LOG_FORMAT(letter, format)  LOG_COLOR_ ## letter #letter " (%" PRIu32 ") %s: " format LOG_RESET_COLOR "\n"
+      |                                     ^~~~~~~~~~
+/root/esp/esp-idf/components/log/include/esp_log.h:437:86: note: in expansion of macro 'LOG_FORMAT'
+  437 |         else if (level==ESP_LOG_WARN )      { esp_log_write(ESP_LOG_WARN,       tag, LOG_FORMAT(W, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                      ^~~~~~~~~~
+/root/esp/esp-idf/components/log/include/esp_log.h:464:41: note: in expansion of macro 'ESP_LOG_LEVEL'
+  464 |         if ( LOG_LOCAL_LEVEL >= level ) ESP_LOG_LEVEL(level, tag, format, ##__VA_ARGS__); \
+      |                                         ^~~~~~~~~~~~~
+/root/esp/esp-idf/components/log/include/esp_log.h:368:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  368 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+/root/openclaw/workspace/esp-idf-ancs-a2dp-gatts-coex/components/a2dp_sink/a2dp_sink.c:321:9: note: in expansion of macro 'ESP_LOGI'
+  321 |         ESP_LOGI(TAG, "A2DP: %u packets, %llu bytes, %u pps",
+      |         ^~~~~~~~
+/root/esp/esp-idf/components/log/include/esp_log.h:291:27: error: format '%u' expects argument of type 'unsigned int', but argument 8 has type 'long unsigned int' [-Werror=format=]
+  291 | #define LOG_COLOR(COLOR)  "\033[0;" COLOR "m"
+      |                           ^~~~~~~~~
+/root/esp/esp-idf/components/log/include/esp_log.h:295:27: note: in expansion of macro 'LOG_COLOR'
+  295 | #define LOG_COLOR_W       LOG_COLOR(LOG_COLOR_BROWN)
+      |                           ^~~~~~~~~
+/root/esp/esp-idf/components/log/include/esp_log.h:308:37: note: in expansion of macro 'LOG_COLOR_W'
+  308 | #define LOG_FORMAT(letter, format)  LOG_COLOR_ ## letter #letter " (%" PRIu32 ") %s: " format LOG_RESET_COLOR "\n"
+      |                                     ^~~~~~~~~~
+/root/esp/esp-idf/components/log/include/esp_log.h:437:86: note: in expansion of macro 'LOG_FORMAT'
+  437 |         else if (level==ESP_LOG_WARN )      { esp_log_write(ESP_LOG_WARN,       tag, LOG_FORMAT(W, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                      ^~~~~~~~~~
+/root/esp/esp-idf/components/log/include/esp_log.h:464:41: note: in expansion of macro 'ESP_LOG_LEVEL'
+  464 |         if ( LOG_LOCAL_LEVEL >= level ) ESP_LOG_LEVEL(level, tag, format, ##__VA_ARGS__); \
+      |                                         ^~~~~~~~~~~~~
+/root/esp/esp-idf/components/log/include/esp_log.h:368:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  368 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+/root/openclaw/workspace/esp-idf-ancs-a2dp-gatts-coex/components/a2dp_sink/a2dp_sink.c:321:9: note: in expansion of macro 'ESP_LOGI'
+  321 |         ESP_LOGI(TAG, "A2DP: %u packets, %llu bytes, %u pps",
+      |         ^~~~~~~~
+/root/openclaw/workspace/esp-idf-ancs-a2dp-gatts-coex/components/a2dp_sink/a2dp_sink.c:323:1: error: format '%u' expects argument of type 'unsigned int', but argument 6 has type 'uint32_t' {aka 'long unsigned int'} [-Werror=format=]
+  323 |                  s_a2dp_ctx.packet_count / 5);
+      | ^          
+/root/esp/esp-idf/components/log/include/esp_log.h:308:59: note: in definition of macro 'LOG_FORMAT'
+  308 | #define LOG_FORMAT(letter, format)  LOG_COLOR_ ## letter #letter " (%" PRIu32 ") %s: " format LOG_RESET_COLOR "\n"
+      |                                                           ^~~~~~
+/root/esp/esp-idf/components/log/include/esp_log.h:464:41: note: in expansion of macro 'ESP_LOG_LEVEL'
+  464 |         if ( LOG_LOCAL_LEVEL >= level ) ESP_LOG_LEVEL(level, tag, format, ##__VA_ARGS__); \
+      |                                         ^~~~~~~~~~~~~
+/root/esp/esp-idf/components/log/include/esp_log.h:368:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  368 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+/root/openclaw/workspace/esp-idf-ancs-a2dp-gatts-coex/components/a2dp_sink/a2dp_sink.c:321:9: note: in expansion of macro 'ESP_LOGI'
+  321 |         ESP_LOGI(TAG, "A2DP: %u packets, %llu bytes, %u pps",
+      |         ^~~~~~~~
+/root/openclaw/workspace/esp-idf-ancs-a2dp-gatts-coex/components/a2dp_sink/a2dp_sink.c:323:1: error: format '%u' expects argument of type 'unsigned int', but argument 8 has type 'long unsigned int' [-Werror=format=]
+  323 |                  s_a2dp_ctx.packet_count / 5);
+      | ^          
+/root/esp/esp-idf/components/log/include/esp_log.h:308:59: note: in definition of macro 'LOG_FORMAT'
+  308 | #define LOG_FORMAT(letter, format)  LOG_COLOR_ ## letter #letter " (%" PRIu32 ") %s: " format LOG_RESET_COLOR "\n"
+      |                                                           ^~~~~~
+/root/esp/esp-idf/components/log/include/esp_log.h:464:41: note: in expansion of macro 'ESP_LOG_LEVEL'
+  464 |         if ( LOG_LOCAL_LEVEL >= level ) ESP_LOG_LEVEL(level, tag, format, ##__VA_ARGS__); \
+      |                                         ^~~~~~~~~~~~~
+/root/esp/esp-idf/components/log/include/esp_log.h:368:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  368 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+/root/openclaw/workspace/esp-idf-ancs-a2dp-gatts-coex/components/a2dp_sink/a2dp_sink.c:321:9: note: in expansion of macro 'ESP_LOGI'
+  321 |         ESP_LOGI(TAG, "A2DP: %u packets, %llu bytes, %u pps",
+      |         ^~~~~~~~
+/root/openclaw/workspace/esp-idf-ancs-a2dp-gatts-coex/components/a2dp_sink/a2dp_sink.c:323:1: error: format '%u' expects argument of type 'unsigned int', but argument 6 has type 'uint32_t' {aka 'long unsigned int'} [-Werror=format=]
+  323 |                  s_a2dp_ctx.packet_count / 5);
+      | ^          
+/root/esp/esp-idf/components/log/include/esp_log.h:308:59: note: in definition of macro 'LOG_FORMAT'
+  308 | #define LOG_FORMAT(letter, format)  LOG_COLOR_ ## letter #letter " (%" PRIu32 ") %s: " format LOG_RESET_COLOR "\n"
+      |                                                           ^~~~~~
+/root/esp/esp-idf/components/log/include/esp_log.h:464:41: note: in expansion of macro 'ESP_LOG_LEVEL'
+  464 |         if ( LOG_LOCAL_LEVEL >= level ) ESP_LOG_LEVEL(level, tag, format, ##__VA_ARGS__); \
+      |                                         ^~~~~~~~~~~~~
+/root/esp/esp-idf/components/log/include/esp_log.h:368:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  368 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+/root/openclaw/workspace/esp-idf-ancs-a2dp-gatts-coex/components/a2dp_sink/a2dp_sink.c:321:9: note: in expansion of macro 'ESP_LOGI'
+  321 |         ESP_LOGI(TAG, "A2DP: %u packets, %llu bytes, %u pps",
+      |         ^~~~~~~~
+/root/openclaw/workspace/esp-idf-ancs-a2dp-gatts-coex/components/a2dp_sink/a2dp_sink.c:323:1: error: format '%u' expects argument of type 'unsigned int', but argument 8 has type 'long unsigned int' [-Werror=format=]
+  323 |                  s_a2dp_ctx.packet_count / 5);
+      | ^          
+/root/esp/esp-idf/components/log/include/esp_log.h:308:59: note: in definition of macro 'LOG_FORMAT'
+  308 | #define LOG_FORMAT(letter, format)  LOG_COLOR_ ## letter #letter " (%" PRIu32 ") %s: " format LOG_RESET_COLOR "\n"
+      |                                                           ^~~~~~
+/root/esp/esp-idf/components/log/include/esp_log.h:464:41: note: in expansion of macro 'ESP_LOG_LEVEL'
+  464 |         if ( LOG_LOCAL_LEVEL >= level ) ESP_LOG_LEVEL(level, tag, format, ##__VA_ARGS__); \
+      |                                         ^~~~~~~~~~~~~
+/root/esp/esp-idf/components/log/include/esp_log.h:368:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  368 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+/root/openclaw/workspace/esp-idf-ancs-a2dp-gatts-coex/components/a2dp_sink/a2dp_sink.c:321:9: note: in expansion of macro 'ESP_LOGI'
+  321 |         ESP_LOGI(TAG, "A2DP: %u packets, %llu bytes, %u pps",
+      |         ^~~~~~~~
+/root/esp/esp-idf/components/log/include/esp_log.h:291:27: error: format '%u' expects argument of type 'unsigned int', but argument 6 has type 'uint32_t' {aka 'long unsigned int'} [-Werror=format=]
+  291 | #define LOG_COLOR(COLOR)  "\033[0;" COLOR "m"
+      |                           ^~~~~~~~~
+/root/esp/esp-idf/components/log/include/esp_log.h:296:27: note: in expansion of macro 'LOG_COLOR'
+  296 | #define LOG_COLOR_I       LOG_COLOR(LOG_COLOR_GREEN)
+      |                           ^~~~~~~~~
+/root/esp/esp-idf/components/log/include/esp_log.h:308:37: note: in expansion of macro 'LOG_COLOR_I'
+  308 | #define LOG_FORMAT(letter, format)  LOG_COLOR_ ## letter #letter " (%" PRIu32 ") %s: " format LOG_RESET_COLOR "\n"
+      |                                     ^~~~~~~~~~
+/root/esp/esp-idf/components/log/include/esp_log.h:440:86: note: in expansion of macro 'LOG_FORMAT'
+  440 |         else                                { esp_log_write(ESP_LOG_INFO,       tag, LOG_FORMAT(I, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                      ^~~~~~~~~~
+/root/esp/esp-idf/components/log/include/esp_log.h:464:41: note: in expansion of macro 'ESP_LOG_LEVEL'
+  464 |         if ( LOG_LOCAL_LEVEL >= level ) ESP_LOG_LEVEL(level, tag, format, ##__VA_ARGS__); \
+      |                                         ^~~~~~~~~~~~~
+/root/esp/esp-idf/components/log/include/esp_log.h:368:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  368 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+/root/openclaw/workspace/esp-idf-ancs-a2dp-gatts-coex/components/a2dp_sink/a2dp_sink.c:321:9: note: in expansion of macro 'ESP_LOGI'
+  321 |         ESP_LOGI(TAG, "A2DP: %u packets, %llu bytes, %u pps",
+      |         ^~~~~~~~
+/root/esp/esp-idf/components/log/include/esp_log.h:291:27: error: format '%u' expects argument of type 'unsigned int', but argument 8 has type 'long unsigned int' [-Werror=format=]
+  291 | #define LOG_COLOR(COLOR)  "\033[0;" COLOR "m"
+      |                           ^~~~~~~~~
+/root/esp/esp-idf/components/log/include/esp_log.h:296:27: note: in expansion of macro 'LOG_COLOR'
+  296 | #define LOG_COLOR_I       LOG_COLOR(LOG_COLOR_GREEN)
+      |                           ^~~~~~~~~
+/root/esp/esp-idf/components/log/include/esp_log.h:308:37: note: in expansion of macro 'LOG_COLOR_I'
+  308 | #define LOG_FORMAT(letter, format)  LOG_COLOR_ ## letter #letter " (%" PRIu32 ") %s: " format LOG_RESET_COLOR "\n"
+      |                                     ^~~~~~~~~~
+/root/esp/esp-idf/components/log/include/esp_log.h:440:86: note: in expansion of macro 'LOG_FORMAT'
+  440 |         else                                { esp_log_write(ESP_LOG_INFO,       tag, LOG_FORMAT(I, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                      ^~~~~~~~~~
+/root/esp/esp-idf/components/log/include/esp_log.h:464:41: note: in expansion of macro 'ESP_LOG_LEVEL'
+  464 |         if ( LOG_LOCAL_LEVEL >= level ) ESP_LOG_LEVEL(level, tag, format, ##__VA_ARGS__); \
+      |                                         ^~~~~~~~~~~~~
+/root/esp/esp-idf/components/log/include/esp_log.h:368:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  368 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+/root/openclaw/workspace/esp-idf-ancs-a2dp-gatts-coex/components/a2dp_sink/a2dp_sink.c:321:9: note: in expansion of macro 'ESP_LOGI'
+  321 |         ESP_LOGI(TAG, "A2DP: %u packets, %llu bytes, %u pps",
+      |         ^~~~~~~~
+/root/openclaw/workspace/esp-idf-ancs-a2dp-gatts-coex/components/a2dp_sink/a2dp_sink.c: In function 'bt_app_rc_ct_cb':
+/root/esp/esp-idf/components/log/include/esp_log.h:291:27: error: format '%d' expects argument of type 'int', but argument 6 has type 'esp_avrc_rn_param_t' [-Werror=format=]
+  291 | #define LOG_COLOR(COLOR)  "\033[0;" COLOR "m"
+      |                           ^~~~~~~~~
+/root/esp/esp-idf/components/log/include/esp_log.h:294:27: note: in expansion of macro 'LOG_COLOR'
+  294 | #define LOG_COLOR_E       LOG_COLOR(LOG_COLOR_RED)
+      |                           ^~~~~~~~~
+/root/esp/esp-idf/components/log/include/esp_log.h:308:37: note: in expansion of macro 'LOG_COLOR_E'
+  308 | #define LOG_FORMAT(letter, format)  LOG_COLOR_ ## letter #letter " (%" PRIu32 ") %s: " format LOG_RESET_COLOR "\n"
+      |                                     ^~~~~~~~~~
+/root/esp/esp-idf/components/log/include/esp_log.h:436:86: note: in expansion of macro 'LOG_FORMAT'
+  436 |         if (level==ESP_LOG_ERROR )          { esp_log_write(ESP_LOG_ERROR,      tag, LOG_FORMAT(E, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                      ^~~~~~~~~~
+/root/esp/esp-idf/components/log/include/esp_log.h:464:41: note: in expansion of macro 'ESP_LOG_LEVEL'
+  464 |         if ( LOG_LOCAL_LEVEL >= level ) ESP_LOG_LEVEL(level, tag, format, ##__VA_ARGS__); \
+      |                                         ^~~~~~~~~~~~~
+/root/esp/esp-idf/components/log/include/esp_log.h:368:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  368 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+/root/openclaw/workspace/esp-idf-ancs-a2dp-gatts-coex/components/a2dp_sink/a2dp_sink.c:348:17: note: in expansion of macro 'ESP_LOGI'
+  348 |                 ESP_LOGI(TAG, "Remote volume changed: %d", param->change_ntf.event_parameter);
+      |                 ^~~~~~~~
+/root/esp/esp-idf/components/log/include/esp_log.h:291:27: error: format '%d' expects argument of type 'int', but argument 6 has type 'esp_avrc_rn_param_t' [-Werror=format=]
+  291 | #define LOG_COLOR(COLOR)  "\033[0;" COLOR "m"
+      |                           ^~~~~~~~~
+/root/esp/esp-idf/components/log/include/esp_log.h:295:27: note: in expansion of macro 'LOG_COLOR'
+  295 | #define LOG_COLOR_W       LOG_COLOR(LOG_COLOR_BROWN)
+      |                           ^~~~~~~~~
+/root/esp/esp-idf/components/log/include/esp_log.h:308:37: note: in expansion of macro 'LOG_COLOR_W'
+  308 | #define LOG_FORMAT(letter, format)  LOG_COLOR_ ## letter #letter " (%" PRIu32 ") %s: " format LOG_RESET_COLOR "\n"
+      |                                     ^~~~~~~~~~
+/root/esp/esp-idf/components/log/include/esp_log.h:437:86: note: in expansion of macro 'LOG_FORMAT'
+  437 |         else if (level==ESP_LOG_WARN )      { esp_log_write(ESP_LOG_WARN,       tag, LOG_FORMAT(W, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                      ^~~~~~~~~~
+/root/esp/esp-idf/components/log/include/esp_log.h:464:41: note: in expansion of macro 'ESP_LOG_LEVEL'
+  464 |         if ( LOG_LOCAL_LEVEL >= level ) ESP_LOG_LEVEL(level, tag, format, ##__VA_ARGS__); \
+      |                                         ^~~~~~~~~~~~~
+/root/esp/esp-idf/components/log/include/esp_log.h:368:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  368 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+/root/openclaw/workspace/esp-idf-ancs-a2dp-gatts-coex/components/a2dp_sink/a2dp_sink.c:348:17: note: in expansion of macro 'ESP_LOGI'
+  348 |                 ESP_LOGI(TAG, "Remote volume changed: %d", param->change_ntf.event_parameter);
+      |                 ^~~~~~~~
+/root/openclaw/workspace/esp-idf-ancs-a2dp-gatts-coex/components/a2dp_sink/a2dp_sink.c:348:1: error: format '%d' expects argument of type 'int', but argument 6 has type 'esp_avrc_rn_param_t' [-Werror=format=]
+  348 |                 ESP_LOGI(TAG, "Remote volume changed: %d", param->change_ntf.event_parameter);
+      | ^          
+/root/esp/esp-idf/components/log/include/esp_log.h:308:59: note: in definition of macro 'LOG_FORMAT'
+  308 | #define LOG_FORMAT(letter, format)  LOG_COLOR_ ## letter #letter " (%" PRIu32 ") %s: " format LOG_RESET_COLOR "\n"
+      |                                                           ^~~~~~
+/root/esp/esp-idf/components/log/include/esp_log.h:464:41: note: in expansion of macro 'ESP_LOG_LEVEL'
+  464 |         if ( LOG_LOCAL_LEVEL >= level ) ESP_LOG_LEVEL(level, tag, format, ##__VA_ARGS__); \
+      |                                         ^~~~~~~~~~~~~
+/root/esp/esp-idf/components/log/include/esp_log.h:368:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  368 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+/root/openclaw/workspace/esp-idf-ancs-a2dp-gatts-coex/components/a2dp_sink/a2dp_sink.c:348:17: note: in expansion of macro 'ESP_LOGI'
+  348 |                 ESP_LOGI(TAG, "Remote volume changed: %d", param->change_ntf.event_parameter);
+      |                 ^~~~~~~~
+/root/openclaw/workspace/esp-idf-ancs-a2dp-gatts-coex/components/a2dp_sink/a2dp_sink.c:348:1: error: format '%d' expects argument of type 'int', but argument 6 has type 'esp_avrc_rn_param_t' [-Werror=format=]
+  348 |                 ESP_LOGI(TAG, "Remote volume changed: %d", param->change_ntf.event_parameter);
+      | ^          
+/root/esp/esp-idf/components/log/include/esp_log.h:308:59: note: in definition of macro 'LOG_FORMAT'
+  308 | #define LOG_FORMAT(letter, format)  LOG_COLOR_ ## letter #letter " (%" PRIu32 ") %s: " format LOG_RESET_COLOR "\n"
+      |                                                           ^~~~~~
+/root/esp/esp-idf/components/log/include/esp_log.h:464:41: note: in expansion of macro 'ESP_LOG_LEVEL'
+  464 |         if ( LOG_LOCAL_LEVEL >= level ) ESP_LOG_LEVEL(level, tag, format, ##__VA_ARGS__); \
+      |                                         ^~~~~~~~~~~~~
+/root/esp/esp-idf/components/log/include/esp_log.h:368:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  368 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+/root/openclaw/workspace/esp-idf-ancs-a2dp-gatts-coex/components/a2dp_sink/a2dp_sink.c:348:17: note: in expansion of macro 'ESP_LOGI'
+  348 |                 ESP_LOGI(TAG, "Remote volume changed: %d", param->change_ntf.event_parameter);
+      |                 ^~~~~~~~
+/root/esp/esp-idf/components/log/include/esp_log.h:291:27: error: format '%d' expects argument of type 'int', but argument 6 has type 'esp_avrc_rn_param_t' [-Werror=format=]
+  291 | #define LOG_COLOR(COLOR)  "\033[0;" COLOR "m"
+      |                           ^~~~~~~~~
+/root/esp/esp-idf/components/log/include/esp_log.h:296:27: note: in expansion of macro 'LOG_COLOR'
+  296 | #define LOG_COLOR_I       LOG_COLOR(LOG_COLOR_GREEN)
+      |                           ^~~~~~~~~
+/root/esp/esp-idf/components/log/include/esp_log.h:308:37: note: in expansion of macro 'LOG_COLOR_I'
+  308 | #define LOG_FORMAT(letter, format)  LOG_COLOR_ ## letter #letter " (%" PRIu32 ") %s: " format LOG_RESET_COLOR "\n"
+      |                                     ^~~~~~~~~~
+/root/esp/esp-idf/components/log/include/esp_log.h:440:86: note: in expansion of macro 'LOG_FORMAT'
+  440 |         else                                { esp_log_write(ESP_LOG_INFO,       tag, LOG_FORMAT(I, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                      ^~~~~~~~~~
+/root/esp/esp-idf/components/log/include/esp_log.h:464:41: note: in expansion of macro 'ESP_LOG_LEVEL'
+  464 |         if ( LOG_LOCAL_LEVEL >= level ) ESP_LOG_LEVEL(level, tag, format, ##__VA_ARGS__); \
+      |                                         ^~~~~~~~~~~~~
+/root/esp/esp-idf/components/log/include/esp_log.h:368:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  368 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+/root/openclaw/workspace/esp-idf-ancs-a2dp-gatts-coex/components/a2dp_sink/a2dp_sink.c:348:17: note: in expansion of macro 'ESP_LOGI'
+  348 |                 ESP_LOGI(TAG, "Remote volume changed: %d", param->change_ntf.event_parameter);
+      |                 ^~~~~~~~
+/root/openclaw/workspace/esp-idf-ancs-a2dp-gatts-coex/components/a2dp_sink/a2dp_sink.c: In function 'bt_app_rc_tg_cb':
+/root/esp/esp-idf/components/log/include/esp_log.h:291:27: error: format '%x' expects argument of type 'unsigned int', but argument 6 has type 'uint32_t' {aka 'long unsigned int'} [-Werror=format=]
+  291 | #define LOG_COLOR(COLOR)  "\033[0;" COLOR "m"
+      |                           ^~~~~~~~~
+/root/esp/esp-idf/components/log/include/esp_log.h:294:27: note: in expansion of macro 'LOG_COLOR'
+  294 | #define LOG_COLOR_E       LOG_COLOR(LOG_COLOR_RED)
+      |                           ^~~~~~~~~
+/root/esp/esp-idf/components/log/include/esp_log.h:308:37: note: in expansion of macro 'LOG_COLOR_E'
+  308 | #define LOG_FORMAT(letter, format)  LOG_COLOR_ ## letter #letter " (%" PRIu32 ") %s: " format LOG_RESET_COLOR "\n"
+      |                                     ^~~~~~~~~~
+/root/esp/esp-idf/components/log/include/esp_log.h:436:86: note: in expansion of macro 'LOG_FORMAT'
+  436 |         if (level==ESP_LOG_ERROR )          { esp_log_write(ESP_LOG_ERROR,      tag, LOG_FORMAT(E, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                      ^~~~~~~~~~
+/root/esp/esp-idf/components/log/include/esp_log.h:464:41: note: in expansion of macro 'ESP_LOG_LEVEL'
+  464 |         if ( LOG_LOCAL_LEVEL >= level ) ESP_LOG_LEVEL(level, tag, format, ##__VA_ARGS__); \
+      |                                         ^~~~~~~~~~~~~
+/root/esp/esp-idf/components/log/include/esp_log.h:368:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  368 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+/root/openclaw/workspace/esp-idf-ancs-a2dp-gatts-coex/components/a2dp_sink/a2dp_sink.c:367:13: note: in expansion of macro 'ESP_LOGI'
+  367 |             ESP_LOGI(TAG, "AVRC TG remote features: 0x%x", param->rmt_feats.feat_mask);
+      |             ^~~~~~~~
+/root/esp/esp-idf/components/log/include/esp_log.h:291:27: error: format '%x' expects argument of type 'unsigned int', but argument 6 has type 'uint32_t' {aka 'long unsigned int'} [-Werror=format=]
+  291 | #define LOG_COLOR(COLOR)  "\033[0;" COLOR "m"
+      |                           ^~~~~~~~~
+/root/esp/esp-idf/components/log/include/esp_log.h:295:27: note: in expansion of macro 'LOG_COLOR'
+  295 | #define LOG_COLOR_W       LOG_COLOR(LOG_COLOR_BROWN)
+      |                           ^~~~~~~~~
+/root/esp/esp-idf/components/log/include/esp_log.h:308:37: note: in expansion of macro 'LOG_COLOR_W'
+  308 | #define LOG_FORMAT(letter, format)  LOG_COLOR_ ## letter #letter " (%" PRIu32 ") %s: " format LOG_RESET_COLOR "\n"
+      |                                     ^~~~~~~~~~
+/root/esp/esp-idf/components/log/include/esp_log.h:437:86: note: in expansion of macro 'LOG_FORMAT'
+  437 |         else if (level==ESP_LOG_WARN )      { esp_log_write(ESP_LOG_WARN,       tag, LOG_FORMAT(W, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                      ^~~~~~~~~~
+/root/esp/esp-idf/components/log/include/esp_log.h:464:41: note: in expansion of macro 'ESP_LOG_LEVEL'
+  464 |         if ( LOG_LOCAL_LEVEL >= level ) ESP_LOG_LEVEL(level, tag, format, ##__VA_ARGS__); \
+      |                                         ^~~~~~~~~~~~~
+/root/esp/esp-idf/components/log/include/esp_log.h:368:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  368 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+/root/openclaw/workspace/esp-idf-ancs-a2dp-gatts-coex/components/a2dp_sink/a2dp_sink.c:367:13: note: in expansion of macro 'ESP_LOGI'
+  367 |             ESP_LOGI(TAG, "AVRC TG remote features: 0x%x", param->rmt_feats.feat_mask);
+      |             ^~~~~~~~
+/root/openclaw/workspace/esp-idf-ancs-a2dp-gatts-coex/components/a2dp_sink/a2dp_sink.c:367:1: error: format '%x' expects argument of type 'unsigned int', but argument 6 has type 'uint32_t' {aka 'long unsigned int'} [-Werror=format=]
+  367 |             ESP_LOGI(TAG, "AVRC TG remote features: 0x%x", param->rmt_feats.feat_mask);
+      | ^          
+/root/esp/esp-idf/components/log/include/esp_log.h:308:59: note: in definition of macro 'LOG_FORMAT'
+  308 | #define LOG_FORMAT(letter, format)  LOG_COLOR_ ## letter #letter " (%" PRIu32 ") %s: " format LOG_RESET_COLOR "\n"
+      |                                                           ^~~~~~
+/root/esp/esp-idf/components/log/include/esp_log.h:464:41: note: in expansion of macro 'ESP_LOG_LEVEL'
+  464 |         if ( LOG_LOCAL_LEVEL >= level ) ESP_LOG_LEVEL(level, tag, format, ##__VA_ARGS__); \
+      |                                         ^~~~~~~~~~~~~
+/root/esp/esp-idf/components/log/include/esp_log.h:368:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  368 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+/root/openclaw/workspace/esp-idf-ancs-a2dp-gatts-coex/components/a2dp_sink/a2dp_sink.c:367:13: note: in expansion of macro 'ESP_LOGI'
+  367 |             ESP_LOGI(TAG, "AVRC TG remote features: 0x%x", param->rmt_feats.feat_mask);
+      |             ^~~~~~~~
+/root/openclaw/workspace/esp-idf-ancs-a2dp-gatts-coex/components/a2dp_sink/a2dp_sink.c:367:1: error: format '%x' expects argument of type 'unsigned int', but argument 6 has type 'uint32_t' {aka 'long unsigned int'} [-Werror=format=]
+  367 |             ESP_LOGI(TAG, "AVRC TG remote features: 0x%x", param->rmt_feats.feat_mask);
+      | ^          
+/root/esp/esp-idf/components/log/include/esp_log.h:308:59: note: in definition of macro 'LOG_FORMAT'
+  308 | #define LOG_FORMAT(letter, format)  LOG_COLOR_ ## letter #letter " (%" PRIu32 ") %s: " format LOG_RESET_COLOR "\n"
+      |                                                           ^~~~~~
+/root/esp/esp-idf/components/log/include/esp_log.h:464:41: note: in expansion of macro 'ESP_LOG_LEVEL'
+  464 |         if ( LOG_LOCAL_LEVEL >= level ) ESP_LOG_LEVEL(level, tag, format, ##__VA_ARGS__); \
+      |                                         ^~~~~~~~~~~~~
+/root/esp/esp-idf/components/log/include/esp_log.h:368:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  368 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+/root/openclaw/workspace/esp-idf-ancs-a2dp-gatts-coex/components/a2dp_sink/a2dp_sink.c:367:13: note: in expansion of macro 'ESP_LOGI'
+  367 |             ESP_LOGI(TAG, "AVRC TG remote features: 0x%x", param->rmt_feats.feat_mask);
+      |             ^~~~~~~~
+/root/esp/esp-idf/components/log/include/esp_log.h:291:27: error: format '%x' expects argument of type 'unsigned int', but argument 6 has type 'uint32_t' {aka 'long unsigned int'} [-Werror=format=]
+  291 | #define LOG_COLOR(COLOR)  "\033[0;" COLOR "m"
+      |                           ^~~~~~~~~
+/root/esp/esp-idf/components/log/include/esp_log.h:296:27: note: in expansion of macro 'LOG_COLOR'
+  296 | #define LOG_COLOR_I       LOG_COLOR(LOG_COLOR_GREEN)
+      |                           ^~~~~~~~~
+/root/esp/esp-idf/components/log/include/esp_log.h:308:37: note: in expansion of macro 'LOG_COLOR_I'
+  308 | #define LOG_FORMAT(letter, format)  LOG_COLOR_ ## letter #letter " (%" PRIu32 ") %s: " format LOG_RESET_COLOR "\n"
+      |                                     ^~~~~~~~~~
+/root/esp/esp-idf/components/log/include/esp_log.h:440:86: note: in expansion of macro 'LOG_FORMAT'
+  440 |         else                                { esp_log_write(ESP_LOG_INFO,       tag, LOG_FORMAT(I, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                      ^~~~~~~~~~
+/root/esp/esp-idf/components/log/include/esp_log.h:464:41: note: in expansion of macro 'ESP_LOG_LEVEL'
+  464 |         if ( LOG_LOCAL_LEVEL >= level ) ESP_LOG_LEVEL(level, tag, format, ##__VA_ARGS__); \
+      |                                         ^~~~~~~~~~~~~
+/root/esp/esp-idf/components/log/include/esp_log.h:368:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  368 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+/root/openclaw/workspace/esp-idf-ancs-a2dp-gatts-coex/components/a2dp_sink/a2dp_sink.c:367:13: note: in expansion of macro 'ESP_LOGI'
+  367 |             ESP_LOGI(TAG, "AVRC TG remote features: 0x%x", param->rmt_feats.feat_mask);
+      |             ^~~~~~~~
+cc1: some warnings being treated as errors
+[97/119] Building C object esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/src/scheme_ble.c.obj
+[98/119] Building C object esp-idf/ancs/CMakeFiles/__idf_ancs.dir/ble_ancs.c.obj
+[99/119] Building C object esp-idf/json/CMakeFiles/__idf_json.dir/cJSON/cJSON.c.obj
+[100/119] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/bt_init.c.obj
+[101/119] Building C object esp-idf/spiffs/CMakeFiles/__idf_spiffs.dir/esp_spiffs.c.obj
+[102/119] Linking C static library esp-idf/fatfs/libfatfs.a
+[103/119] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj
+[104/119] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/coex_manager.c.obj
+FAILED: esp-idf/main/CMakeFiles/__idf_main.dir/coex_manager.c.obj 
+/root/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc -DESP_PLATFORM -DIDF_VER=\"v5.2.1\" -DSOC_MMU_PAGE_SIZE=CONFIG_MMU_PAGE_SIZE -DSOC_XTAL_FREQ_MHZ=CONFIG_XTAL_FREQ -D_GLIBCXX_HAVE_POSIX_SEMAPHORE -D_GLIBCXX_USE_POSIX_SEMAPHORE -D_GNU_SOURCE -D_POSIX_READER_WRITER_LOCKS -I/root/openclaw/workspace/esp-idf-ancs-a2dp-gatts-coex/build/config -I/root/openclaw/workspace/esp-idf-ancs-a2dp-gatts-coex/main -I/root/esp/esp-idf/components/newlib/platform_include -I/root/esp/esp-idf/components/freertos/config/include -I/root/esp/esp-idf/components/freertos/config/include/freertos -I/root/esp/esp-idf/components/freertos/config/xtensa/include -I/root/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include -I/root/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include -I/root/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos -I/root/esp/esp-idf/components/freertos/esp_additions/include -I/root/esp/esp-idf/components/esp_hw_support/include -I/root/esp/esp-idf/components/esp_hw_support/include/soc -I/root/esp/esp-idf/components/esp_hw_support/include/soc/esp32 -I/root/esp/esp-idf/components/esp_hw_support/port/esp32/. -I/root/esp/esp-idf/components/heap/include -I/root/esp/esp-idf/components/log/include -I/root/esp/esp-idf/components/soc/include -I/root/esp/esp-idf/components/soc/esp32 -I/root/esp/esp-idf/components/soc/esp32/include -I/root/esp/esp-idf/components/hal/platform_port/include -I/root/esp/esp-idf/components/hal/esp32/include -I/root/esp/esp-idf/components/hal/include -I/root/esp/esp-idf/components/esp_rom/include -I/root/esp/esp-idf/components/esp_rom/include/esp32 -I/root/esp/esp-idf/components/esp_rom/esp32 -I/root/esp/esp-idf/components/esp_common/include -I/root/esp/esp-idf/components/esp_system/include -I/root/esp/esp-idf/components/esp_system/port/soc -I/root/esp/esp-idf/components/esp_system/port/include/private -I/root/esp/esp-idf/components/xtensa/esp32/include -I/root/esp/esp-idf/components/xtensa/include -I/root/esp/esp-idf/components/xtensa/deprecated_include -I/root/esp/esp-idf/components/lwip/include -I/root/esp/esp-idf/components/lwip/include/apps -I/root/esp/esp-idf/components/lwip/include/apps/sntp -I/root/esp/esp-idf/components/lwip/lwip/src/include -I/root/esp/esp-idf/components/lwip/port/include -I/root/esp/esp-idf/components/lwip/port/freertos/include -I/root/esp/esp-idf/components/lwip/port/esp32xx/include -I/root/esp/esp-idf/components/lwip/port/esp32xx/include/arch -I/root/esp/esp-idf/components/lwip/port/esp32xx/include/sys -I/root/esp/esp-idf/components/nvs_flash/include -I/root/esp/esp-idf/components/spi_flash/include -I/root/esp/esp-idf/components/esp_partition/include -I/root/esp/esp-idf/components/bt/include/esp32/include -I/root/esp/esp-idf/components/bt/common/osi/include -I/root/esp/esp-idf/components/bt/common/api/include/api -I/root/esp/esp-idf/components/bt/common/btc/profile/esp/blufi/include -I/root/esp/esp-idf/components/bt/common/btc/profile/esp/include -I/root/esp/esp-idf/components/bt/host/bluedroid/api/include/api -I/root/esp/esp-idf/components/bt/porting/ext/tinycrypt/include -I/root/esp/esp-idf/components/esp_timer/include -I/root/esp/esp-idf/components/esp_wifi/include -I/root/esp/esp-idf/components/esp_wifi/wifi_apps/include -I/root/esp/esp-idf/components/esp_event/include -I/root/esp/esp-idf/components/esp_phy/include -I/root/esp/esp-idf/components/esp_phy/esp32/include -I/root/esp/esp-idf/components/esp_netif/include -I/root/openclaw/workspace/esp-idf-ancs-a2dp-gatts-coex/components/ancs -I/root/openclaw/workspace/esp-idf-ancs-a2dp-gatts-coex/components/ancs/include -I/root/openclaw/workspace/esp-idf-ancs-a2dp-gatts-coex/components/a2dp_sink -I/root/openclaw/workspace/esp-idf-ancs-a2dp-gatts-coex/components/a2dp_sink/include -I/root/esp/esp-idf/components/esp_ringbuf/include -I/root/openclaw/workspace/esp-idf-ancs-a2dp-gatts-coex/components/gatts_server -I/root/openclaw/workspace/esp-idf-ancs-a2dp-gatts-coex/components/gatts_server/include -mlongcalls -Wno-frame-address  -fdiagnostics-color=always -ffunction-sections -fdata-sections -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-variable -Wno-error=unused-but-set-variable -Wno-error=deprecated-declarations -Wextra -Wno-unused-parameter -Wno-sign-compare -Wno-enum-conversion -gdwarf-4 -ggdb -Og -fno-shrink-wrap -fmacro-prefix-map=/root/openclaw/workspace/esp-idf-ancs-a2dp-gatts-coex=. -fmacro-prefix-map=/root/esp/esp-idf=/IDF -fstrict-volatile-bitfields -fno-jump-tables -fno-tree-switch-conversion -std=gnu17 -Wno-old-style-declaration -MD -MT esp-idf/main/CMakeFiles/__idf_main.dir/coex_manager.c.obj -MF esp-idf/main/CMakeFiles/__idf_main.dir/coex_manager.c.obj.d -o esp-idf/main/CMakeFiles/__idf_main.dir/coex_manager.c.obj -c /root/openclaw/workspace/esp-idf-ancs-a2dp-gatts-coex/main/coex_manager.c
+/root/openclaw/workspace/esp-idf-ancs-a2dp-gatts-coex/main/coex_manager.c: In function 'coex_manager_handle_gap_event':
+/root/openclaw/workspace/esp-idf-ancs-a2dp-gatts-coex/main/coex_manager.c:313:14: error: 'ESP_GAP_BLE_CONNECT_EVT' undeclared (first use in this function); did you mean 'ESP_GATTS_CONNECT_EVT'?
+  313 |         case ESP_GAP_BLE_CONNECT_EVT:
+      |              ^~~~~~~~~~~~~~~~~~~~~~~
+      |              ESP_GATTS_CONNECT_EVT
+/root/openclaw/workspace/esp-idf-ancs-a2dp-gatts-coex/main/coex_manager.c:313:14: note: each undeclared identifier is reported only once for each function it appears in
+/root/openclaw/workspace/esp-idf-ancs-a2dp-gatts-coex/main/coex_manager.c:316:14: error: 'ESP_GAP_BLE_DISCONNECT_EVT' undeclared (first use in this function); did you mean 'ESP_GATTS_DISCONNECT_EVT'?
+  316 |         case ESP_GAP_BLE_DISCONNECT_EVT:
+      |              ^~~~~~~~~~~~~~~~~~~~~~~~~~
+      |              ESP_GATTS_DISCONNECT_EVT
+[105/119] Building C object esp-idf/mqtt/CMakeFiles/__idf_mqtt.dir/esp-mqtt/mqtt_client.c.obj
+[106/119] Building C object esp-idf/spiffs/CMakeFiles/__idf_spiffs.dir/spiffs/src/spiffs_nucleus.c.obj
+[107/119] Building C object esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/src/manager.c.obj
+ninja: build stopped: subcommand failed.

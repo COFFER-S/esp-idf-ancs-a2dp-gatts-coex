@@ -46,14 +46,12 @@ esp_err_t bt_init(void)
         /* Continue anyway, this is not fatal */
     }
     
-    /* Initialize BT controller with BTDM mode (dual mode) */
+    /* Initialize BT controller with BLE mode only (simpler for now) */
     ESP_LOGI(TAG, "Initializing BT controller...");
     esp_bt_controller_config_t bt_cfg = BT_CONTROLLER_INIT_CONFIG_DEFAULT();
     
-    /* Adjust controller configuration for coexistence */
-    bt_cfg.mode = ESP_BT_MODE_BTDM;  /* Dual mode: Classic + BLE */
-    bt_cfg.max_acl_conn = 3;          /* Max 3 ACL connections */
-    bt_cfg.max_sync_conn = 0;         /* No SCO connections for now */
+    /* Use BLE only mode (simpler, more stable) */
+    bt_cfg.mode = ESP_BT_MODE_BLE;
     
     ret = esp_bt_controller_init(&bt_cfg);
     if (ret != ESP_OK) {
@@ -62,9 +60,9 @@ esp_err_t bt_init(void)
     }
     ESP_LOGI(TAG, "BT controller initialized");
     
-    /* Enable BT controller in BTDM mode */
+    /* Enable BT controller in BLE mode */
     ESP_LOGI(TAG, "Enabling BT controller...");
-    ret = esp_bt_controller_enable(ESP_BT_MODE_BTDM);
+    ret = esp_bt_controller_enable(ESP_BT_MODE_BLE);
     if (ret != ESP_OK) {
         ESP_LOGE(TAG, "BT controller enable failed: %s", esp_err_to_name(ret));
         esp_bt_controller_deinit();
@@ -76,8 +74,8 @@ esp_err_t bt_init(void)
     ESP_LOGI(TAG, "Initializing Bluedroid...");
     esp_bluedroid_config_t bluedroid_cfg = BT_BLUEDROID_INIT_CONFIG_DEFAULT();
     
-    /* Increase heap for multiple profiles */
-    bluedroid_cfg.ssp_en = true;  /* Enable Simple Secure Pairing */
+    /* Enable SSP for pairing */
+    bluedroid_cfg.ssp_en = true;
     
     ret = esp_bluedroid_init_with_cfg(&bluedroid_cfg);
     if (ret != ESP_OK) {
@@ -100,28 +98,11 @@ esp_err_t bt_init(void)
     }
     ESP_LOGI(TAG, "Bluedroid enabled");
     
-    /* Set up security parameters */
-    ESP_LOGI(TAG, "Configuring security...");
-    
-    /* Enable simple secure pairing */
-    esp_ble_io_cap_t iocap = ESP_IO_CAP_NONE;  /* No input/output */
-    esp_ble_gap_set_security_param(ESP_BLE_SM_IOCAP_MODE, &iocap, sizeof(uint8_t));
-    
-    /* Require MITM protection and bonding */
-    esp_ble_auth_req_t auth_req = ESP_LE_AUTH_REQ_SC_MITM_BOND;
-    esp_ble_gap_set_security_param(ESP_BLE_SM_AUTHEN_REQ_MODE, &auth_req, sizeof(uint8_t));
-    
-    /* Set max key size */
-    uint8_t key_size = 16;
-    esp_ble_gap_set_security_param(ESP_BLE_SM_MAX_KEY_SIZE, &key_size, sizeof(uint8_t));
-    
-    ESP_LOGI(TAG, "Security configured");
-    
     s_bt_initialized = true;
     
     ESP_LOGI(TAG, "========================================");
     ESP_LOGI(TAG, "Bluetooth initialization complete!");
-    ESP_LOGI(TAG, "Mode: BTDM (Dual Mode)");
+    ESP_LOGI(TAG, "Mode: BLE Only (Dual mode requires fixes)");
     ESP_LOGI(TAG, "Profiles: ANCS + A2DP + GATTS");
     ESP_LOGI(TAG, "========================================");
     
