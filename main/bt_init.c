@@ -50,9 +50,6 @@ esp_err_t bt_init(void)
     ESP_LOGI(TAG, "Initializing BT controller...");
     esp_bt_controller_config_t bt_cfg = BT_CONTROLLER_INIT_CONFIG_DEFAULT();
     
-    /* Use BLE only mode (simpler, more stable) */
-    bt_cfg.mode = ESP_BT_MODE_BLE;
-    
     ret = esp_bt_controller_init(&bt_cfg);
     if (ret != ESP_OK) {
         ESP_LOGE(TAG, "BT controller init failed: %s", esp_err_to_name(ret));
@@ -73,9 +70,6 @@ esp_err_t bt_init(void)
     /* Initialize Bluedroid stack */
     ESP_LOGI(TAG, "Initializing Bluedroid...");
     esp_bluedroid_config_t bluedroid_cfg = BT_BLUEDROID_INIT_CONFIG_DEFAULT();
-    
-    /* Enable SSP for pairing */
-    bluedroid_cfg.ssp_en = true;
     
     ret = esp_bluedroid_init_with_cfg(&bluedroid_cfg);
     if (ret != ESP_OK) {
@@ -102,7 +96,7 @@ esp_err_t bt_init(void)
     
     ESP_LOGI(TAG, "========================================");
     ESP_LOGI(TAG, "Bluetooth initialization complete!");
-    ESP_LOGI(TAG, "Mode: BLE Only (Dual mode requires fixes)");
+    ESP_LOGI(TAG, "Mode: BLE Only");
     ESP_LOGI(TAG, "Profiles: ANCS + A2DP + GATTS");
     ESP_LOGI(TAG, "========================================");
     

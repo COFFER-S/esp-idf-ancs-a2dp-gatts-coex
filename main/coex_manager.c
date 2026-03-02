@@ -104,7 +104,7 @@ esp_err_t coex_manager_deinit(void)
 
 coex_state_t coex_manager_get_state(void)
 {
-    coex_state_t state;
+    coex_state_t state = COEX_STATE_IDLE;
     
     if (xSemaphoreTake(s_coex_mutex, portMAX_DELAY) == pdTRUE) {
         state = s_coex_mgr.state;
@@ -310,11 +310,14 @@ void coex_manager_handle_gap_event(esp_gap_ble_cb_event_t event,
     
     /* Handle specific events */
     switch (event) {
-        case ESP_GAP_BLE_CONNECT_EVT:
-            ESP_LOGD(TAG, "BLE GAP connect event");
+        case ESP_GAP_BLE_ADV_START_COMPLETE_EVT:
+            ESP_LOGD(TAG, "BLE ADV start complete");
             break;
-        case ESP_GAP_BLE_DISCONNECT_EVT:
-            ESP_LOGD(TAG, "BLE GAP disconnect event");
+        case ESP_GAP_BLE_ADV_STOP_COMPLETE_EVT:
+            ESP_LOGD(TAG, "BLE ADV stop complete");
+            break;
+        case ESP_GAP_BLE_AUTH_CMPL_EVT:
+            ESP_LOGD(TAG, "BLE auth complete");
             break;
         default:
             break;
