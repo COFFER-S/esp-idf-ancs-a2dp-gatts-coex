@@ -21,8 +21,10 @@ This example demonstrates the coexistence of three Bluetooth profiles:
 
 ## Software Requirements
 
-- ESP-IDF v5.0 or later
+- ESP-IDF v5.2.1 (recommended and tested)
 - Bluetooth Classic and BLE enabled in menuconfig
+
+> **Note:** This project is tested and verified with ESP-IDF v5.2.1. While it may work with other versions, v5.2.1 is the recommended version for best compatibility.
 
 ## Project Structure
 
