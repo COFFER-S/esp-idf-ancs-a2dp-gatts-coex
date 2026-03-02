@@ -73,19 +73,54 @@ cp sdkconfig.defaults sdkconfig
 
 ## Build and Flash
 
-### Build the project
+### Requirements
+
+**Required ESP-IDF Version:** v5.2.1 (tested and verified)
+
+For other versions:
+- v5.0.x: Should work with minor modifications
+- v5.1.x: Tested, known to work
+- **v5.2.1: ✅ Recommended and fully tested**
+- v5.3.x: Should work, not yet verified
+
+### Environment Setup
+
 ```bash
+# Export ESP-IDF environment
+. $IDF_PATH/export.sh
+
+# Verify ESP-IDF version
+idf.py --version
+# Expected: ESP-IDF v5.2.1
+```
+
+### Build the project
+
+```bash
+# Set target (if not already set)
+idf.py set-target esp32
+
+# Build
 idf.py build
 ```
 
 ### Flash to device
+
 ```bash
+# Flash and monitor
+idf.py -p /dev/ttyUSB0 flash monitor
+
+# Or flash only
 idf.py -p /dev/ttyUSB0 flash
 ```
 
 ### Monitor output
+
 ```bash
+# Monitor only (no flash)
 idf.py -p /dev/ttyUSB0 monitor
+
+# Exit monitor: Ctrl + ]
 ```
 
 ## Usage
