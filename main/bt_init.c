@@ -38,15 +38,7 @@ esp_err_t bt_init(void)
     ESP_ERROR_CHECK(ret);
     ESP_LOGI(TAG, "NVS flash initialized");
     
-    /* Release BT controller memory for dual mode operation */
-    ESP_LOGI(TAG, "Releasing BT controller memory...");
-    ret = esp_bt_controller_mem_release(ESP_BT_MODE_CLASSIC_BT);
-    if (ret) {
-        ESP_LOGW(TAG, "Failed to release classic BT memory: %s", esp_err_to_name(ret));
-        /* Continue anyway, this is not fatal */
-    }
-    
-    /* Initialize BT controller with BLE mode only (simpler for now) */
+    /* Initialize BT controller with BTDM mode (Dual Mode - BLE + Classic) */
     ESP_LOGI(TAG, "Initializing BT controller...");
     esp_bt_controller_config_t bt_cfg = BT_CONTROLLER_INIT_CONFIG_DEFAULT();
     
@@ -57,9 +49,9 @@ esp_err_t bt_init(void)
     }
     ESP_LOGI(TAG, "BT controller initialized");
     
-    /* Enable BT controller in BLE mode */
-    ESP_LOGI(TAG, "Enabling BT controller...");
-    ret = esp_bt_controller_enable(ESP_BT_MODE_BLE);
+    /* Enable BT controller in BTDM mode (both BLE and Classic Bluetooth) */
+    ESP_LOGI(TAG, "Enabling BT controller (BTDM mode)...");
+    ret = esp_bt_controller_enable(ESP_BT_MODE_BTDM);
     if (ret != ESP_OK) {
         ESP_LOGE(TAG, "BT controller enable failed: %s", esp_err_to_name(ret));
         esp_bt_controller_deinit();
@@ -96,7 +88,7 @@ esp_err_t bt_init(void)
     
     ESP_LOGI(TAG, "========================================");
     ESP_LOGI(TAG, "Bluetooth initialization complete!");
-    ESP_LOGI(TAG, "Mode: BLE Only");
+    ESP_LOGI(TAG, "Mode: BTDM (BLE + Classic BT)");
     ESP_LOGI(TAG, "Profiles: ANCS + A2DP + GATTS");
     ESP_LOGI(TAG, "========================================");
     
