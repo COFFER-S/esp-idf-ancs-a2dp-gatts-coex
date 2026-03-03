@@ -61,128 +61,22 @@ static esp_err_t start_advertising(void);
 #define GATTS_CHAR_UUID    0xFF01
 #define GATTS_DESCR_UUID   0x2902
 
-/* Attribute table */
-enum {
-    GATTS_IDX_SVC,
-    GATTS_IDX_CHAR_VAL,
-    GATTS_IDX_CHAR_CFG,
-    GATTS_IDX_NB,
+/* Maximum attribute length */
+#define GATTS_ATTR_VAL_LEN_MAX  600
+
+/* Advertising parameters */
+static esp_ble_adv_params_t adv_params = {
+    .adv_int_min        = 0x0020,
+    .adv_int_max        = 0x0040,
+    .adv_type           = ADV_TYPE_IND,
+    .own_addr_type      = BLE_ADDR_TYPE_PUBLIC,
+    .peer_addr          = {0},
+    .peer_addr_type     = BLE_ADDR_TYPE_PUBLIC,
+    .channel_map        = ADV_CHNL_ALL,
+    .adv_filter_policy  = ADV_FILTER_ALLOW_SCAN_ANY_CON_ANY,
 };
 
-static esp_gatts_attr_db_t gatt_db[GATTS_IDX_NB] = {
-    /* Service Declaration */
-    [GATTS_IDX_SVC] = 
-    {{ESP_GATT_AUTO_RSP}, {
-        ESP_UUID_LEN_16, 
-        (uint8_t *)&GATTS_SERVICE_UUID, 
-        ESP_GATT_PERM_READ, 
-        sizeof(uint16_t), 
-        sizeof(uint16_t), 
-        (uint8_t *)&GATTS_SERVICE_UUID
-    }},
-
-    /* Characteristic Declaration */
-    [GATTS_IDX_CHAR_VAL] = 
-    {{ESP_GATT_AUTO_RSP}, {
-        ESP_UUID_LEN_16, 
-        (uint8_t *)&GATTS_CHAR_UUID, 
-        ESP_GATT_PERM_READ | ESP_GATT_PERM_WRITE, 
-        GATTS_ATTR_VAL_LEN_MAX, 
-        0, 
-        NULL
-    }},
-
-    /* Client Characteristic Configuration Descriptor */
-    [GATTS_IDX_CHAR_CFG] = 
-    {{ESP_GATT_AUTO_RSP}, {
-        ESP_UUID_LEN_16, 
-        (uint8_t *)&GATTS_DESCR_UUID, 
-        ESP_GATT_PERM_READ | ESP_GATT_PERM_WRITE, 
-        sizeof(uint16_t), 
-        0, 
-        NULL
-    }},
-};
-
-esp_err_t gatts_server_init(const gatts_server_cfg_t *cfg)
-{
-    ESP_LOGI(TAG, "Initializing GATT Server");
-    
-    if (cfg == NULL) {
-        return ESP_ERR_INVALID_ARG;
-    }
-    
-    memset(&s_gatts_ctx, 0, sizeof(s_gatts_ctx));
-    s_gatts_ctx.cfg = *cfg;
-    s_gatts_ctx.state = GATTS_STATE_IDLE;
-    s_gatts_ctx.battery_level = 100;
-    
-    /* Create mutex */
-    s_gatts_mutex = xSemaphoreCreateMutex();
-    if (s_gatts_mutex == NULL) {
-        ESP_LOGE(TAG, "Failed to create mutex");
-        return ESP_ERR_NO_MEM;
-    }
-    
-    /* Register GATTS callback */
-    esp_err_t ret = esp_ble_gatts_register_callback(gatts_event_handler);
-    if (ret != ESP_OK) {
-        ESP_LOGE(TAG, "Failed to register GATTS callback: %s", esp_err_to_name(ret));
-        vSemaphoreDelete(s_gatts_mutex);
-        return ret;
-    }
-    
-    /* Register GAP callback */
-    ret = esp_ble_gap_register_callback(gap_event_handler);
-    if (ret != ESP_OK) {
-        ESP_LOGE(TAG, "Failed to register GAP callback: %s", esp_err_to_name(ret));
-        vSemaphoreDelete(s_gatts_mutex);
-        return ret;
-    }
-    
-    /* Register GATT app */
-    ret = esp_ble_gatts_app_register(0);
-    if (ret != ESP_OK) {
-        ESP_LOGE(TAG, "Failed to register GATT app: %s", esp_err_to_name(ret));
-        vSemaphoreDelete(s_gatts_mutex);
-        return ret;
-    }
-    
-    s_gatts_ctx.state = GATTS_STATE_INIT;
-    
-    ESP_LOGI(TAG, "GATT Server initialized successfully");
-    return ESP_OK;
-}
-
-esp_err_t gatts_server_deinit(void)
-{
-    ESP_LOGI(TAG, "Deinitializing GATT Server");
-    
-    if (s_gatts_mutex != NULL) {
-        vSemaphoreDelete(s_gatts_mutex);
-        s_gatts_mutex = NULL;
-    }
-    
-    memset(&s_gatts_ctx, 0, sizeof(s_gatts_ctx));
-    
-    ESP_LOGI(TAG, "GATT Server deinitialized");
-    return ESP_OK;
-}
-
-esp_err_t gatts_server_register_callback(gatts_server_event_cb_t cb)
-{
-    if (cb == NULL) {
-        return ESP_ERR_INVALID_ARG;
-    }
-    
-    if (xSemaphoreTake(s_gatts_mutex, portMAX_DELAY) == pdTRUE) {
-        s_gatts_ctx.event_cb = cb;
-        xSemaphoreGive(s_gatts_mutex);
-    }
-    
-    return ESP_OK;
-}
-
+/* Start advertising */
 static esp_err_t start_advertising(void)
 {
     ESP_LOGI(TAG, "Starting BLE advertising");
@@ -204,23 +98,6 @@ static esp_err_t start_advertising(void)
         .flag = (ESP_BLE_ADV_FLAG_GEN_DISC | ESP_BLE_ADV_FLAG_BREDR_NOT_SPT),
     };
     
-    /* Configure scan response data */
-    esp_ble_adv_data_t scan_rsp_data = {
-        .set_scan_rsp = true,
-        .include_name = true,
-        .include_txpower = true,
-        .min_interval = 0x0020,
-        .max_interval = 0x0040,
-        .appearance = 0x0000,
-        .manufacturer_len = 0,
-        .p_manufacturer_data = NULL,
-        .service_data_len = 0,
-        .p_service_data = NULL,
-        .service_uuid_len = sizeof(uint16_t),
-        .p_service_uuid = (uint8_t *)&GATTS_SERVICE_UUID,
-        .flag = 0,
-    };
-    
     /* Set advertising data */
     esp_err_t ret = esp_ble_gap_config_adv_data(&adv_data);
     if (ret != ESP_OK) {
@@ -228,112 +105,44 @@ static esp_err_t start_advertising(void)
         return ret;
     }
     
-    /* Set scan response data */
-    ret = esp_ble_gap_config_adv_data(&scan_rsp_data);
-    if (ret != ESP_OK) {
-        ESP_LOGE(TAG, "Failed to configure scan rsp data: %s", esp_err_to_name(ret));
-        return ret;
-    }
-    
     ESP_LOGI(TAG, "Advertising data configured, waiting for GAP event to start");
     return ESP_OK;
 }
 
-esp_err_t gatts_server_start_advertising(void)
+/* GAP Event Handler */
+static void gap_event_handler(esp_gap_ble_cb_event_t event, esp_ble_gap_cb_param_t *param)
 {
-    ESP_LOGI(TAG, "Starting GATT Server advertising");
-    
-    if (s_gatts_mutex == NULL) {
-        return ESP_ERR_INVALID_STATE;
+    switch (event) {
+        case ESP_GAP_BLE_ADV_DATA_SET_COMPLETE_EVT:
+            ESP_LOGI(TAG, "GAP_ADV_DATA_SET_COMPLETE");
+            /* Start advertising */
+            esp_ble_gap_start_advertising(&adv_params);
+            break;
+            
+        case ESP_GAP_BLE_SCAN_RSP_DATA_SET_COMPLETE_EVT:
+            ESP_LOGI(TAG, "GAP_SCAN_RSP_DATA_SET_COMPLETE");
+            break;
+            
+        case ESP_GAP_BLE_ADV_START_COMPLETE_EVT:
+            if (param->adv_start_cmpl.status == ESP_BT_STATUS_SUCCESS) {
+                ESP_LOGI(TAG, "GAP_ADV_START_COMPLETE - Advertising started!");
+                s_gatts_ctx.state = GATTS_STATE_ADVERTISING;
+            } else {
+                ESP_LOGE(TAG, "GAP_ADV_START_COMPLETE - Failed, status=%d", 
+                         param->adv_start_cmpl.status);
+            }
+            break;
+            
+        case ESP_GAP_BLE_ADV_STOP_COMPLETE_EVT:
+            ESP_LOGI(TAG, "GAP_ADV_STOP_COMPLETE");
+            if (s_gatts_ctx.state == GATTS_STATE_ADVERTISING) {
+                s_gatts_ctx.state = GATTS_STATE_INIT;
+            }
+            break;
+            
+        default:
+            break;
     }
-    
-    return start_advertising();
-}
-
-esp_err_t gatts_server_stop_advertising(void)
-{
-    ESP_LOGI(TAG, "Stopping GATT Server advertising");
-    
-    esp_err_t ret = esp_ble_gap_stop_advertising();
-    if (ret != ESP_OK) {
-        ESP_LOGE(TAG, "Failed to stop advertising: %s", esp_err_to_name(ret));
-        return ret;
-    }
-    
-    if (xSemaphoreTake(s_gatts_mutex, portMAX_DELAY) == pdTRUE) {
-        if (s_gatts_ctx.state == GATTS_STATE_ADVERTISING) {
-            s_gatts_ctx.state = GATTS_STATE_INIT;
-        }
-        xSemaphoreGive(s_gatts_mutex);
-    }
-    
-    ESP_LOGI(TAG, "Advertising stopped");
-    return ESP_OK;
-}
-
-esp_err_t gatts_server_send_notification(uint16_t conn_id, uint16_t handle, 
-                                          uint8_t *value, uint16_t len)
-{
-    if (value == NULL || len == 0) {
-        return ESP_ERR_INVALID_ARG;
-    }
-    
-    esp_err_t ret = esp_ble_gatts_send_indicate(s_gatts_ctx.gatts_if, conn_id, 
-                                                 handle, len, value, false);
-    if (ret != ESP_OK) {
-        ESP_LOGE(TAG, "Failed to send notification: %s", esp_err_to_name(ret));
-        return ret;
-    }
-    
-    return ESP_OK;
-}
-
-esp_err_t gatts_server_send_indication(uint16_t conn_id, uint16_t handle,
-                                        uint8_t *value, uint16_t len)
-{
-    if (value == NULL || len == 0) {
-        return ESP_ERR_INVALID_ARG;
-    }
-    
-    esp_err_t ret = esp_ble_gatts_send_indicate(s_gatts_ctx.gatts_if, conn_id,
-                                                 handle, len, value, true);
-    if (ret != ESP_OK) {
-        ESP_LOGE(TAG, "Failed to send indication: %s", esp_err_to_name(ret));
-        return ret;
-    }
-    
-    return ESP_OK;
-}
-
-bool gatts_server_is_connected(void)
-{
-    bool connected = false;
-    
-    if (xSemaphoreTake(s_gatts_mutex, portMAX_DELAY) == pdTRUE) {
-        connected = s_gatts_ctx.connected;
-        xSemaphoreGive(s_gatts_mutex);
-    }
-    
-    return connected;
-}
-
-int gatts_server_get_connection_count(void)
-{
-    return gatts_server_is_connected() ? 1 : 0;
-}
-
-esp_err_t gatts_server_set_battery_level(uint8_t level)
-{
-    if (level > 100) {
-        level = 100;
-    }
-    
-    if (xSemaphoreTake(s_gatts_mutex, portMAX_DELAY) == pdTRUE) {
-        s_gatts_ctx.battery_level = level;
-        xSemaphoreGive(s_gatts_mutex);
-    }
-    
-    return ESP_OK;
 }
 
 /* GATT Event Handler */
@@ -347,9 +156,17 @@ static void gatts_event_handler(esp_gatts_cb_event_t event, esp_gatt_if_t gatts_
             if (param->reg.status == ESP_GATT_OK) {
                 s_gatts_ctx.gatts_if = gatts_if;
                 /* Create service */
-                esp_ble_gatts_create_service(gatts_if, 
-                    (esp_gatt_srvc_id_t *)gatt_db[GATTS_IDX_SVC].attr_value,
-                    GATTS_ATTR_VAL_LEN_MAX);
+                esp_gatt_srvc_id_t srvc_id = {
+                    .id = {
+                        .uuid = {
+                            .len = ESP_UUID_LEN_16,
+                            .uuid = {.uuid16 = GATTS_SERVICE_UUID}
+                        },
+                        .inst_id = 0
+                    },
+                    .is_primary = true
+                };
+                esp_ble_gatts_create_service(gatts_if, &srvc_id, GATTS_ATTR_VAL_LEN_MAX);
             }
             break;
         }
@@ -359,13 +176,6 @@ static void gatts_event_handler(esp_gatts_cb_event_t event, esp_gatt_if_t gatts_
                      param->create.status, param->create.service_handle);
             if (param->create.status == ESP_GATT_OK) {
                 s_gatts_ctx.service_handle = param->create.service_handle;
-                /* Add characteristics */
-                for (int i = GATTS_IDX_CHAR_VAL; i < GATTS_IDX_NB; i++) {
-                    esp_ble_gatts_add_char(s_gatts_ctx.service_handle,
-                                           gatt_db[i].attr_value,
-                                           gatt_db[i].attr_control->auto_rsp,
-                                           NULL);
-                }
                 /* Start service */
                 esp_ble_gatts_start_service(s_gatts_ctx.service_handle);
             }
@@ -457,87 +267,6 @@ static void gatts_event_handler(esp_gatts_cb_event_t event, esp_gatt_if_t gatts_
         default:
             break;
     }
-}
-
-/* GAP Event Handler */
-static void gap_event_handler(esp_gap_ble_cb_event_t event, esp_ble_gap_cb_param_t *param)
-{
-    switch (event) {
-        case ESP_GAP_BLE_ADV_DATA_SET_COMPLETE_EVT:
-            ESP_LOGI(TAG, "GAP_ADV_DATA_SET_COMPLETE");
-            /* Start advertising */
-            esp_ble_gap_start_advertising(&adv_params);
-            break;
-            
-        case ESP_GAP_BLE_SCAN_RSP_DATA_SET_COMPLETE_EVT:
-            ESP_LOGI(TAG, "GAP_SCAN_RSP_DATA_SET_COMPLETE");
-            break;
-            
-        case ESP_GAP_BLE_ADV_START_COMPLETE_EVT:
-            if (param->adv_start_cmpl.status == ESP_BT_STATUS_SUCCESS) {
-                ESP_LOGI(TAG, "GAP_ADV_START_COMPLETE - Advertising started!");
-                s_gatts_ctx.state = GATTS_STATE_ADVERTISING;
-            } else {
-                ESP_LOGE(TAG, "GAP_ADV_START_COMPLETE - Failed, status=%d", 
-                         param->adv_start_cmpl.status);
-            }
-            break;
-            
-        case ESP_GAP_BLE_ADV_STOP_COMPLETE_EVT:
-            ESP_LOGI(TAG, "GAP_ADV_STOP_COMPLETE");
-            if (s_gatts_ctx.state == GATTS_STATE_ADVERTISING) {
-                s_gatts_ctx.state = GATTS_STATE_INIT;
-            }
-            break;
-            
-        default:
-            break;
-    }
-}
-
-/* Advertising parameters */
-static esp_ble_adv_params_t adv_params = {
-    .adv_int_min        = 0x0020,
-    .adv_int_max        = 0x0040,
-    .adv_type           = ADV_TYPE_IND,
-    .own_addr_type      = BLE_ADDR_TYPE_PUBLIC,
-    .peer_addr          = {0},
-    .peer_addr_type     = BLE_ADDR_TYPE_PUBLIC,
-    .channel_map        = ADV_CHNL_ALL,
-    .adv_filter_policy  = ADV_FILTER_ALLOW_SCAN_ANY_CON_ANY,
-};
-
-/* Start advertising */
-static esp_err_t start_advertising(void)
-{
-    ESP_LOGI(TAG, "Starting BLE advertising");
-    
-    /* Configure advertising data */
-    esp_ble_adv_data_t adv_data = {
-        .set_scan_rsp = false,
-        .include_name = true,
-        .include_txpower = true,
-        .min_interval = 0x0020,
-        .max_interval = 0x0040,
-        .appearance = 0x0000,
-        .manufacturer_len = 0,
-        .p_manufacturer_data = NULL,
-        .service_data_len = 0,
-        .p_service_data = NULL,
-        .service_uuid_len = 0,
-        .p_service_uuid = NULL,
-        .flag = (ESP_BLE_ADV_FLAG_GEN_DISC | ESP_BLE_ADV_FLAG_BREDR_NOT_SPT),
-    };
-    
-    /* Set advertising data */
-    esp_err_t ret = esp_ble_gap_config_adv_data(&adv_data);
-    if (ret != ESP_OK) {
-        ESP_LOGE(TAG, "Failed to configure adv data: %s", esp_err_to_name(ret));
-        return ret;
-    }
-    
-    ESP_LOGI(TAG, "Advertising data configured, waiting for GAP event to start");
-    return ESP_OK;
 }
 
 /* Public API implementations */
