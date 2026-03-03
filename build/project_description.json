@@ -1,7 +1,7 @@
 {
     "version":            "1.1",
     "project_name":       "ancs_a2dp_gatts_coex",
-    "project_version":    "171ab6d-dirty",
+    "project_version":    "5b7eabd-dirty",
     "project_path":       "/root/openclaw/workspace/esp-idf-ancs-a2dp-gatts-coex",
     "idf_path":           "/root/esp/esp-idf",
     "build_dir":          "/root/openclaw/workspace/esp-idf-ancs-a2dp-gatts-coex/build",
